@@ -9,7 +9,9 @@
 </head>
 
 <body>
-<i class="fa fa-chevron-left" style="font-size:36px"></i>
+    <div class="back">
+        <i class="fa fa-chevron-left" style="font-size:36px"></i>
+    </div>
 </body>
 
 </html>
