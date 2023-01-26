@@ -21,7 +21,7 @@
     <div class="userprofile">
         <h2>@kate.zimmer</h2>
         <h4>Class of 25' | Love to explore</h4>
-        <button onclick="conversation.php">Message</button>
+        <a href="conversation.php">Message</a>
       </div>
    
 </body>

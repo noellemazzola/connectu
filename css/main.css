@@ -44,7 +44,7 @@ div {
     font-size: 18px;
     font-weight: normal;
 }
-.userprofile button {
+.userprofile a {
     font-family: 'Helvetica light';
     font-size: 25px;
     text-align: center;
