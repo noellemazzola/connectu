@@ -53,4 +53,11 @@ div {
     font-size: 20px;
     padding: 10px 100px
 }
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10%;
+    background-color: blueviolet;
+    background-position: center;
+}
 }
