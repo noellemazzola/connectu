@@ -1,5 +1,3 @@
-<?php include "templates/header.php" ?>
-
 <html>
 <head>
     <meta charset="UTF-8">
@@ -31,5 +29,3 @@
 </body>
 
 </html>
-
-<?php include "templates/footer.php" ?>
