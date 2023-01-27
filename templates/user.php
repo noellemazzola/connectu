@@ -1,7 +1,10 @@
+<?php include "templates/header.php" ?>
+
 <style>
     <?php include "css/main.css"
     ?>
 </style>
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -31,3 +34,5 @@
 </body>
 
 </html>
+
+<?php include "templates/footer.php" ?>
