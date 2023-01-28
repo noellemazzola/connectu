@@ -96,8 +96,8 @@ html,body{
 }
 /* Message container - Person1 */
 .container1msg{
-    border: 2px solid #dedede;
-    background-color: #f1f1f1;
+    border: 2px solid #707070;
+    background-color: #6290C8;
     border-radius: 5px;
     padding: 10px;
     margin: 10px 0;
@@ -106,8 +106,11 @@ html,body{
   
   /* Message container - Person2 */
   .container2msg {
-    border-color: #ccc;
-    background-color: #ddd;
+    border-color: #707070;
+    background-color: #403D39;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
     overflow: auto;
   }
   
@@ -145,25 +148,25 @@ html,body{
 <body>
     <div class="container1msg">
         <img src="Images/profile/alex-starnes-WYE2UhXsU1Y-unsplash.jpg" alt="Picture of woman in white" class="Person1">
-        <p>Hey! Are you attending the event on Friday?</p>
+        <p color=#FFFFFF>Hey! Are you attending the event on Friday?</p>
         <span class="message-sent1">5:22pm</span>
     </div>
 
     <div class="container2msg">
     <img src="Images/profile/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="Picture of woman in red" class="Person2">
-    <p>Yes I am! Would you like to go together?</p>
+    <p color="#FFFFFF">Yes I am! Would you like to go together?</p>
     <span class="message-sent2">5:25pm</span>
     </div>
 
     <div class="container1msg">
     <img src="Images/profile/alex-starnes-WYE2UhXsU1Y-unsplash.jpg" alt="Picture of woman in white" class="Person1">
-    <p>Absolutely, lets meet up at Millican Hall at 4pm.</p>
+    <p color="#FFFFFF">Absolutely, lets meet up at Millican Hall at 4pm.</p>
     <span class="message-sent1">5:27pm</span>
     </div>
 
     <div class="container2msg">
     <img src="Images/profile/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="Picture of woman in red" class="Person2">
-    <p>Can't wait see you there!</p>
+    <p color="#FFFFFF">Can't wait see you there!</p>
     <span class="message-sent2">5:30pm</span>
     </div>
 
