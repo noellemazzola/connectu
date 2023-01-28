@@ -88,7 +88,7 @@ html,body{
     }
 /*SEARCH.PHP STYLING*/
 .container{
-    width: 80%;
+    width: 100%;
     min-height: 100vh;
     padding: 10%;
     background-color: blueviolet;
@@ -113,7 +113,9 @@ html,body{
     background-color: #403D39;
     border-radius: 5px;
     padding: 10px;
-    margin: 10px 0;
+    margin-top: 2% auto;
+    margin-bottom: 2% auto;
+    margin-left: 2% auto;
     overflow: auto;
   }
   
