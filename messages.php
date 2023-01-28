@@ -100,10 +100,7 @@ html,body{
     background-color: #6290C8;
     border-radius: 5px;
     padding: 10px;
-    margin-top: 2% auto;
-    margin-bottom: 2% auto;
-    margin-left: 2% auto;
-    margin-right: 10% auto;
+    margin: 10px 0;
     overflow: auto;
   }
   
@@ -113,9 +110,7 @@ html,body{
     background-color: #403D39;
     border-radius: 5px;
     padding: 10px;
-    margin-top: 2% auto;
-    margin-bottom: 2% auto;
-    margin-left: 2% auto;
+    margin: 10px 0;
     overflow: auto;
   }
   
