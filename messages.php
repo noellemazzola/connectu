@@ -141,11 +141,34 @@ html,body{
     float: left;
     color: #FFFFFF;
   }
+
+  /* Header for Messages */
+  .header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+/* Profile Image */
+    .header.img{
+    max-width: 100px;
+    float: left;
+    margin-left: 20px;
+    border-radius: 50%;
+    }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+    <div class="header">
+    <h1>Message</h1>
+    <img src="Images/profile/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="Picture of woman in red" class="Person2" class="header">
+    <p>@kate.zimmer</p>
+    </div>
+
     <div class="container1msg">
         <img src="Images/profile/alex-starnes-WYE2UhXsU1Y-unsplash.jpg" alt="Picture of woman in white" class="Person1">
         <p style="color:#FFFFFF;">Hey! Are you attending the event on Friday?</p>
