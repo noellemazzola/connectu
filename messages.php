@@ -88,7 +88,7 @@ html,body{
     }
 /*SEARCH.PHP STYLING*/
 .container{
-    width: 100%;
+    width: 80%;
     min-height: 100vh;
     padding: 10%;
     background-color: blueviolet;
