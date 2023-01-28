@@ -146,14 +146,18 @@ html,body{
   .header {
   padding: 60px;
   text-align: center;
-  background: #1abc9c;
+  background: ##F2EFE9;
   color: white;
   font-size: 30px;
 }
 
+    .header.p{
+        color: #5E2BFF;
+    }
+
 /* Profile Image */
     .header.img{
-    max-width: 100px;
+    max-width: 20px;
     float: left;
     margin-left: 20px;
     border-radius: 50%;
