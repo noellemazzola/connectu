@@ -206,7 +206,7 @@ html,body{
     </div>
 
     <div class="footer">
-    <form action="/txtmsg.php">
+    <form action="/messages.php">
         <input type="text" id="txtmsg" name="txtmsg" placeholder="Message...">
         <input type="submit" value="Submit">
     </form>
