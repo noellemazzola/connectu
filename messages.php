@@ -160,6 +160,12 @@ html,body{
     margin-left: 20px;
     border-radius: 50%;
     }
+
+    .footer {
+        padding: 60px; 
+        align:center;
+        font-size: 20px;  
+    }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
