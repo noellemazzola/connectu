@@ -151,12 +151,8 @@ html,body{
   font-size: 30px;
 }
 
-    .header.p{
-        color: #5E2BFF;
-    }
-
 /* Profile Image */
-    .header.img{
+    .header img{
     max-width: 20px;
     float: left;
     margin-left: 20px;
@@ -168,9 +164,9 @@ html,body{
 
 <body>
     <div class="header">
-    <h1>Message</h1>
+    <h1 style="color:#5E2BFF;">Message</h1>
     <img src="Images/profile/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="Picture of woman in red" class="Person2" class="header">
-    <p>@kate.zimmer</p>
+    <p style="color:#5E2BFF;">@kate.zimmer</p>
     </div>
 
     <div class="container1msg">
