@@ -195,5 +195,12 @@ html,body{
     <span class="message-sent2">5:30pm</span>
     </div>
 
+    <div class="footer">
+    <form action="/txtmsg.php">
+        <input type="text" id="txtmsg" name="txtmsg" placeholder="Message...">
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+
 
 </html>
