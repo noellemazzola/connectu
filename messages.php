@@ -145,6 +145,7 @@ html,body{
   /* Header for Messages */
   .header {
   padding: 60px;
+  margin-bottom: 30px;
   text-align: center;
   background: ##F2EFE9;
   color: white;
