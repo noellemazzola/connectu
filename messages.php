@@ -100,7 +100,10 @@ html,body{
     background-color: #6290C8;
     border-radius: 5px;
     padding: 10px;
-    margin: 10px 0;
+    margin-top: 2% auto;
+    margin-bottom: 2% auto;
+    margin-left: 2% auto;
+    margin-right: 10% auto;
     overflow: auto;
   }
   
@@ -133,13 +136,13 @@ html,body{
   /* Text from Person1 */
   .message-sent1 {
     float: right;
-    color: #aaa;
+    color: #FFFFFF;
   }
   
   /* Text from Person2 */
   .message-sent2 {
     float: left;
-    color: #999;
+    color: #FFFFFF;
   }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -148,25 +151,25 @@ html,body{
 <body>
     <div class="container1msg">
         <img src="Images/profile/alex-starnes-WYE2UhXsU1Y-unsplash.jpg" alt="Picture of woman in white" class="Person1">
-        <p color=#FFFFFF>Hey! Are you attending the event on Friday?</p>
+        <p style="color:#FFFFFF;">Hey! Are you attending the event on Friday?</p>
         <span class="message-sent1">5:22pm</span>
     </div>
 
     <div class="container2msg">
     <img src="Images/profile/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="Picture of woman in red" class="Person2">
-    <p color="#FFFFFF">Yes I am! Would you like to go together?</p>
+    <p style="color:#FFFFFF;">Yes I am! Would you like to go together?</p>
     <span class="message-sent2">5:25pm</span>
     </div>
 
     <div class="container1msg">
     <img src="Images/profile/alex-starnes-WYE2UhXsU1Y-unsplash.jpg" alt="Picture of woman in white" class="Person1">
-    <p color="#FFFFFF">Absolutely, lets meet up at Millican Hall at 4pm.</p>
+    <p style="color:#FFFFFF;">Absolutely, lets meet up at Millican Hall at 4pm.</p>
     <span class="message-sent1">5:27pm</span>
     </div>
 
     <div class="container2msg">
     <img src="Images/profile/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="Picture of woman in red" class="Person2">
-    <p color="#FFFFFF">Can't wait see you there!</p>
+    <p style="color:#FFFFFF;">Can't wait see you there!</p>
     <span class="message-sent2">5:30pm</span>
     </div>
 
