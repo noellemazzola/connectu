@@ -154,6 +154,7 @@ html,body{
 /* Profile Image */
     .header img{
     max-width: 200px;
+    width: auto;
     float: left;
     margin-left: 20px;
     border-radius: 50%;
