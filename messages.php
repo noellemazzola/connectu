@@ -153,7 +153,7 @@ html,body{
 
 /* Profile Image */
     .header img{
-    max-width: 100px;
+    max-width: 200px;
     float: left;
     margin-left: 20px;
     border-radius: 50%;
