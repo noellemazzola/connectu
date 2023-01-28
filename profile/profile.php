@@ -16,13 +16,13 @@
     </div>
 
     <div class="userpic">
-      <img src="images/profile/alex-starnes-WYE2UhXsU1Y-unsplash.jpg">
+      <img src="Images/profile/alex-starnes-WYE2UhXsU1Y-unsplash.jpg">
     </div>
 
     <div class="userprofile">
         <h2>@isabella.monte</h2>
         <h4>Class of 24' | President of Campus Activities Board</h4>
-        <a href="conversation.php">Friends List</a>
+        <a href="friendslist.php">Friends List</a>
       </div>
    
 </body>
