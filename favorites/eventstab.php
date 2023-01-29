@@ -9,7 +9,7 @@
     </style>
     <style>
         /* Style the links inside the navigation bar */
-        .topnav a {
+        .nav_bar a {
         float: center;
         text-align: center;
         padding: 14px 16px;
@@ -17,7 +17,7 @@
         }
 
         /* Add a color to the active/current link */
-        .topnav a.active {
+        .nav_bar a.active {
         color: #5E2BFF;
         text-decoration: underline;
         }
@@ -29,8 +29,8 @@
     <div class="header">
         <h1 style="color:#5E2BFF;">Favorites</h1>
         <div class="nav_bar">
-            <a class="active" href="/favorites/eventstab.php">EVENTS</a>
-            <a href="/favorites/clubstab.php">CLUBS</a>
+            <a class="active" href="/favorites/eventstab.php" style="color:black;">EVENTS</a>
+            <a href="/favorites/clubstab.php" style="color:black;">CLUBS</a>
         </div>
     </div>
    
