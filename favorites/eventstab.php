@@ -8,9 +8,11 @@
     <?php include ("/css/main.css")?>
     </style>
     <style>
+        .nav_bar{
+            overflow:hidden;
+        }
         /* Style the links inside the navigation bar */
         .nav_bar a {
-        float: center;
         width: 100% auto;
         text-align: center;
         padding: 14px 16px;
