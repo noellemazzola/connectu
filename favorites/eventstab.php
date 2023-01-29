@@ -11,9 +11,11 @@
         /* Style the links inside the navigation bar */
         .nav_bar a {
         float: center;
+        width: 100% auto;
         text-align: center;
         padding: 14px 16px;
         font-size: 17px;
+        color:black;
         }
 
         /* Add a color to the active/current link */
