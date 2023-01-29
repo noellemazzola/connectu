@@ -40,7 +40,9 @@
         table.calendar{
             border: 1px;
             font-size: 10px;
-            margin: 0 auto;
+            margin: auto;
+            width: 50%;
+            padding: 10px;
         }
         table.th{
             padding:5px;
@@ -58,7 +60,7 @@
     <div class="navbar">
             <a class="active" href="/favorites/eventstab.php"><b>EVENTS</b></a>
             <a href="/favorites/clubstab.php">CLUBS</a>
-    </div>
+    </div><br>
     <div class="calendar">
     <table>
         <tr>
