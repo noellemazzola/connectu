@@ -39,10 +39,9 @@
         }
         .calendar{
             border: 1px solid black;
-            font-size: 10px;
+            font-size: 20px;
             margin: auto;
             width: 50%;
-            padding: 10px;
         }
         table.th{
             padding:10px;
