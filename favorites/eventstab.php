@@ -30,10 +30,10 @@
 <body>
     <div class="header">
         <h1 style="color:#5E2BFF;">Favorites</h1>
-        <div class="nav_bar">
+    </div>
+    <div class="nav_bar">
             <a class="active" href="/favorites/eventstab.php" style="color:black;">EVENTS</a>
             <a href="/favorites/clubstab.php" style="color:black;">CLUBS</a>
-        </div>
     </div>
    
 </body>
