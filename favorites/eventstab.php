@@ -47,6 +47,11 @@
         margin: 10px 0;
         overflow: auto;
     }
+        .event img {
+        float: left;
+        max-width: 25% auto;
+        margin-right: 20px;
+    }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -61,17 +66,17 @@
     </div>
     <h2>Tue, Jan 17</h2>
     <div class="event">
-        <img src ="Images/gwcgbm.png">
+        <img src ="Images/events/gwcgbm.png">
         <p>Girls Who Code: <br>Coding Session<br>Tues, Jan 17 9-11pm <br>Student Union Key West Ballroom</p>
     </div>
     <h2>Fri, Jan 20</h2>
     <div class="event">
-        <img src ="Images/geekknight.jpg">
+        <img src ="Images/events/geekknight.jpg">
         <p>Geek Knight: <br>Featuring 15+ Clubs<br>Fri, Jan 20 6-10pm <br>Student Union Pegasus West Ballroom</p>
     </div>
     <h2>Mon, Jan 23</h2>
     <div class="event">
-        <img src ="Images/ucfest.png">
+        <img src ="Images/events/ucfest.png">
         <p>UCFest: <br>UCF Festival<br>Mon, Jan 23 5-11pm <br>Student Union Key West Ballroom</p>
     </div>
    
