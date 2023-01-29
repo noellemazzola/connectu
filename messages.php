@@ -166,10 +166,6 @@ html,body{
         align:center;
         font-size: 20px;  
     }
-
-    .footer input#txtmsg {
-        width: 80% auto;
-    }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
