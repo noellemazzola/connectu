@@ -49,7 +49,7 @@
     }
         .event img {
         float: left;
-        max-width: 25% auto;
+        height: 10%;
         margin-right: 20px;
     }
     </style>
