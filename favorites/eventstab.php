@@ -8,20 +8,28 @@
     <?php include ("/css/main.css")?>
     </style>
     <style>
-        .nav_bar{
+      /* Header for Messages */
+        .header {
+        padding: 60px;
+        margin-bottom: 30px;
+        text-align: center;
+        background: #F2EFE9;
+        color: white;
+        font-size: 30px;
+        }
+        .navbar{
             overflow:hidden;
         }
         /* Style the links inside the navigation bar */
-        .nav_bar a {
-        width: 100% auto;
+        .navbar a {
         text-align: center;
         padding: 14px 16px;
         font-size: 17px;
-        color:black;
+        color: black;
         }
 
         /* Add a color to the active/current link */
-        .nav_bar a.active {
+        .navbar a.active {
         color: #5E2BFF;
         text-decoration: underline;
         }
@@ -33,9 +41,9 @@
     <div class="header">
         <h1 style="color:#5E2BFF;">Favorites</h1>
     </div>
-    <div class="nav_bar">
-            <a class="active" href="/favorites/eventstab.php" style="color:black;">EVENTS</a>
-            <a href="/favorites/clubstab.php" style="color:black;">CLUBS</a>
+    <div class="navbar">
+            <a class="active" href="/favorites/eventstab.php">EVENTS</a>
+            <a href="/favorites/clubstab.php">CLUBS</a>
     </div>
    
 </body>

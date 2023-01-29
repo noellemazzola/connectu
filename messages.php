@@ -161,7 +161,7 @@ html,body{
     border-radius: 50%;
     }
 
-    .footer {
+    .footer_msg {
         padding: 20px; 
         align:center;
         font-size: 20px;  
@@ -201,7 +201,7 @@ html,body{
     <span class="message-sent2">5:30pm</span>
     </div>
 
-    <div class="footer">
+    <div class="footer_msg">
     <form action="messages.php">
         <input type="text" id="txtmsg" name="txtmsg" placeholder="Message...">
         <input type="submit" value="Submit">
