@@ -40,6 +40,10 @@
         table.calendar{
             border: 1px;
             font-size: 10px;
+            align:center;
+        }
+        table.th{
+            padding:5px;
         }
 
 
