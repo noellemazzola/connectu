@@ -213,3 +213,16 @@ div {
     height: 20%;
     margin-right: 20px;
 }
+/* clubs styling */
+    .clubs{
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 10px;
+        overflow: auto;
+    }
+    .clubs img {
+        float: left;
+        height: 20%;
+        margin-right: 20px;
+        border-radius: 50%;
+    }

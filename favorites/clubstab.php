@@ -38,7 +38,7 @@
         color: #5E2BFF;
         }
 
-        /* Event styling */
+        /* clubs styling */
         .clubs{
         border: 2px solid black;
         border-radius: 5px;
