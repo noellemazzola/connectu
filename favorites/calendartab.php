@@ -37,6 +37,10 @@
         .navbar a.active {
         color: #5E2BFF;
         }
+        table.calendar{
+            border: 1px;
+            font-size: 10px;
+        }
 
 
     </style>
@@ -51,9 +55,10 @@
             <a class="active" href="/favorites/eventstab.php"><b>EVENTS</b></a>
             <a href="/favorites/clubstab.php">CLUBS</a>
     </div>
+    <div class="calendar">
     <table>
         <tr>
-        <th colspan="7">December 2013</th>
+        <th colspan="7"><h3>Feburary 2023</h3></th>
         </tr>
 
         <tr>
@@ -112,7 +117,7 @@
         <td>31</td>
 </tr>
 
-</table>
+</table></div>
 
 
    
