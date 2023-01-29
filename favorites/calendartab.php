@@ -40,7 +40,7 @@
         table.calendar{
             border: 1px;
             font-size: 10px;
-            align:center;
+            margin: 0 auto;
         }
         table.th{
             padding:5px;
