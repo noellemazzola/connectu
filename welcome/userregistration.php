@@ -5,6 +5,15 @@
             <p>Please fill in this form to create an account.</p>
             <hr>
 
+            <label for="firstname"><b>First Name</b></label>
+            <input type="text" placeholder="Enter First Name" name="firstname" id="firstname" required>
+
+            <label for="lastname"><b>Last Name</b></label>
+            <input type="text" placeholder="Enter Last Name" name="lastname" id="lastname" required>
+
+            <label for="gradyear"><b>Expected Graduation Date</b></label>
+            <input type="text" placeholder="Enter Expected Graduation Date" name="gradyear" id="gradyear" required>
+
             <label for="email"><b>Email</b></label>
             <input type="text" placeholder="Enter Email" name="email" id="email" required>
 
