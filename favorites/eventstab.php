@@ -49,7 +49,7 @@
     }
         .event img {
         float: left;
-        height: 10%;
+        height: 20%;
         margin-right: 20px;
     }
     </style>
@@ -66,17 +66,17 @@
     </div>
     <h2>Tue, Jan 17</h2>
     <div class="event">
-        <img src ="Images/events/gwcgbm.png">
+        <img src ="Images/events/gwcgbm.png" alt="Girls who code">
         <p>Girls Who Code: <br>Coding Session<br>Tues, Jan 17 9-11pm <br>Student Union Key West Ballroom</p>
     </div>
     <h2>Fri, Jan 20</h2>
     <div class="event">
-        <img src ="Images/events/geekknight.jpg">
+        <img src ="Images/events/geekknight.jpg" alt="Geek Knight">
         <p>Geek Knight: <br>Featuring 15+ Clubs<br>Fri, Jan 20 6-10pm <br>Student Union Pegasus West Ballroom</p>
     </div>
     <h2>Mon, Jan 23</h2>
     <div class="event">
-        <img src ="Images/events/ucfest.png">
+        <img src="Images/events/ucfest.png" alt="UCF Festival">
         <p>UCFest: <br>UCF Festival<br>Mon, Jan 23 5-11pm <br>Student Union Key West Ballroom</p>
     </div>
    
