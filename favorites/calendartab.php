@@ -42,9 +42,7 @@
             font-size: 20px;
             margin: auto;
             width: 50%;
-        }
-        table.th{
-            padding:10px;
+            padding: 10px:
         }
 
 
