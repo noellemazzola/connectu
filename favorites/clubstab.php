@@ -1,4 +1,4 @@
-html>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,8 +60,8 @@ html>
         <h1 style="color:#5E2BFF;">Favorites</h1>
     </div>
     <div class="navbar">
-            <a href="/favorites/eventstab.php"><b>EVENTS</b></a>
-            <a class="active" href="/favorites/clubstab.php">CLUBS</a>
+            <a href="/favorites/eventstab.php">EVENTS</a>
+            <a class="active" href="/favorites/clubstab.php"><b>CLUBS</b></a>
     </div>
     <div class="clubs">
         <img src ="Images/clubs/anime-spot.jpg" alt="Anime spot">
