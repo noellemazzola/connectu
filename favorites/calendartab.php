@@ -40,6 +40,7 @@
         .calendar{
             border: 1px solid black;
             font-size: 20px;
+            text-align: center;
             margin: auto;
             width: 50%;
             padding: 10px:
