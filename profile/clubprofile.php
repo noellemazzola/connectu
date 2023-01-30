@@ -13,22 +13,23 @@
 <body>
   <div class="clubicons">
     <div class="cicon">
-      <i class='fa fa-plus' style='font-size:36px'></i>
-      <i class="fa fa-gear" style='font-size: 36px'></i>
+      <a href="createpost.html"><i class='fa fa-plus' style='font-size:36px'></i></a>
+      <a href="settings.html"><i class="fa fa-gear" style='font-size: 36px'></i></a>
     </div>
   </div>
 
-    <div class="userpic">
+    <div class="clubpic">
       <img src="images/clubs/cab.jpeg">
     </div>
 
-    <div class="userprofile">
+    <div class="clubprofile">
         <h2>Campus Activities Board</h2>
         <h4>Our mission at UCF's Campus Activities Board (CAB) is to foster
             a sense of community on campus by hosting unique events that 
             effectively cater to our diverse student body, and to the Orlando
             community.
         </h4>
+        <a href="profile.html">Switch Account</a>
         <ul>
           <li><i class='fa fa-youtube' style='font-size:36px'></i></li>
           <li><i class='fa fa-instagram' style='font-size:36px'></i></li>

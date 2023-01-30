@@ -12,7 +12,7 @@
 
 <body>
     <div class="back">
-    <a href="profile.php"><i class="fa fa-chevron-left" style="font-size:36px"></i></a>
+    <i class="fa fa-chevron-left" style="font-size:36px" onclick="history.back()"></i>
     </div>
 
     <div class="userpic">
@@ -22,7 +22,7 @@
     <div class="userprofile">
         <h2>@kate.zimmer</h2>
         <h4>Class of 25' | Love to explore</h4>
-        <a href="conversation.php">Message</a>
+        <a href="">Message</a>
       </div>
    
 </body>
