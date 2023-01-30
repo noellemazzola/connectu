@@ -1,11 +1,39 @@
-html,body{
+* {
+    box-sizing: border-box;
+}
+
+html, body{
     margin: 0 auto;
     background-color: #F2EFE9;
+    padding-bottom: 45px;
 }
 
 @font-face {
     font-family: sport;
-    src: url(oldsport.ttf);
+    src: url(../fonts/oldsport.ttf);
+}
+
+/* NAVBAR */
+nav {
+    background-color: #FFFFFF;
+    border: 2px solid #5E2BFF;
+    color: #5E2BFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+
+nav a i {
+    color: #5E2BFF;
+    font-size: 30px;
+}
+
+/* FONT STYLING */
+h2 {
+    color: #5E2BFF;
+    font-family: sport;
 }
 
 @media screen and (max-width: 428px) {
