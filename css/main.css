@@ -2,15 +2,21 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: sport;
+    src: url(../fonts/oldsport.ttf);
+}
+
+@font-face {
+    font-family: Helvetica;
+    src: url(../fonts/Helvetica.ttf);
+}
+
 html, body{
     margin: 0 auto;
     background-color: #F2EFE9;
     padding-bottom: 45px;
-}
-
-@font-face {
-    font-family: sport;
-    src: url(../fonts/oldsport.ttf);
+    font-family: Helvetica;
 }
 
 /* NAVBAR */
@@ -35,6 +41,58 @@ h2 {
     color: #5E2BFF;
     font-family: sport;
 }
+
+/* SINGLE EVENT */
+.event {
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 5px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.event--img {
+    width: 100%;
+}
+
+.event--info {
+    padding: 5px;
+}
+
+.event p {
+    margin-bottom: 0px;
+}
+
+.event--title {
+    font-weight: bold;
+}
+
+.event--icons {
+    display: flex;
+    margin-left: auto;
+    /* padding: 0 5px; */
+}
+
+.event--icons i {
+    padding: 3px 5px;
+}
+
+.scrolling-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.scrolling-wrapper::-webkit-scrollbar {
+      display: none;
+    }
+
+.scroll-item {
+    flex: 0 0 90%;
+}
+
+
 
 @media screen and (max-width: 428px) {
 div {
@@ -226,21 +284,7 @@ div {
     color: #5E2BFF;
     }
 
-/* Event styling */
-    .event{
-    border: 2px solid black;
-    background-color: white;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0;
-    overflow: auto;
-}
-/* Image in the event */
-    .event img {
-    float: left;
-    height: 20%;
-    margin-right: 20px;
-}
+
 /* clubs styling */
     .clubs{
         border: 2px solid black;
