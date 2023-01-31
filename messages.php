@@ -147,7 +147,7 @@ html,body{
   padding: 60px;
   margin-bottom: 30px;
   text-align: center;
-  background: ##F2EFE9;
+  background: #F2EFE9;
   color: white;
   font-size: 30px;
 }
@@ -163,7 +163,7 @@ html,body{
 
     .footer_msg {
         padding: 20px; 
-        align:center;
+        text-align:center;
         font-size: 20px;  
     }
     </style>

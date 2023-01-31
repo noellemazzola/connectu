@@ -1,6 +1,6 @@
 <?php include "templates/header.php" ?>
 <main class="p-3">
-    <i class="bi bi-bell" style="font-size: 30px; float: right;"></i>
+    <a href="notifications.php"><i class="bi bi-bell noti-bell"></i></a>
     <h2>Promoted Events</h2>
     <div class="scrolling-wrapper">
         <div class="scroll-item">
