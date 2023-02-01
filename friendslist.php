@@ -10,7 +10,7 @@
 
     <div class="userpic">
         <img src="images/profile/michael-dam-mEZ3PoFGs_k-unsplash.jpg">
-        <a href="userprofile.php">@kate.zimmer</a>
+        <a href="user.php">@kate.zimmer</a>
       </div>
    
 <?php include "templates/footer.php>" ?>
