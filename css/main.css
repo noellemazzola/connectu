@@ -377,12 +377,12 @@ div {
 .notificationop li {
     font-family: 'Franklin Gothic Medium';
     font-size: 20px;
-    padding: 20px;
+    padding: 25px;
 }
 .notificationop li i {
     display: block;
     float: right;
-    padding-left: 190px;
+    padding-left: 200px;
     color: black;
 }
 /*ACCESSIBILITYST.PHP STYLING*/
