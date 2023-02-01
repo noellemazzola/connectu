@@ -28,6 +28,51 @@
 
     <div class="clubpost">
         <h2>Upcoming Events</h2>
+        <div class="event">
+        <div class="event--grid-item">
+            <img class="event--img" src="Images/events/ucfvssmu.png"/>
+        </div>
+        <div class="event--info">
+            <p class="event--title">Men's Basketball Game: UCF vs. SMU</p>
+            <p class="event--date">Sun, Jan. 8 - 2PM</p>
+            <p class="event--location">Addition Financial Arena</p>
+            <div class="event--icons">
+                <i class="bi bi-person-check-fill"></i>
+                <i class="bi bi-share"></i>
+                <i class="bi bi-heart"></i>
+            </div>
+        </div>
+    </div>
+    <div class="event">
+        <div class="event--grid-item">
+            <img class="event--img" src="Images/events/ucfvssmu.png"/>
+        </div>
+        <div class="event--info">
+            <p class="event--title">Men's Basketball Game: UCF vs. SMU</p>
+            <p class="event--date">Sun, Jan. 8 - 2PM</p>
+            <p class="event--location">Addition Financial Arena</p>
+            <div class="event--icons">
+                <i class="bi bi-person-check-fill"></i>
+                <i class="bi bi-share"></i>
+                <i class="bi bi-heart"></i>
+            </div>
+        </div>
+    </div>
+    <div class="event">
+        <div class="event--grid-item">
+            <img class="event--img" src="Images/events/ucfvssmu.png"/>
+        </div>
+        <div class="event--info">
+            <p class="event--title">Men's Basketball Game: UCF vs. SMU</p>
+            <p class="event--date">Sun, Jan. 8 - 2PM</p>
+            <p class="event--location">Addition Financial Arena</p>
+            <div class="event--icons">
+                <i class="bi bi-person-check-fill"></i>
+                <i class="bi bi-share"></i>
+                <i class="bi bi-heart"></i>
+            </div>
+        </div>
+    </div>
     </div>
 <?php 
   include "templates/navbar.php>";
