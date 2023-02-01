@@ -365,7 +365,7 @@ div {
 .privacyop li i {
     display: block;
     float: right;
-    padding-left: 60px;
+    padding-left: 50px;
     color: black;
 }
 /*NOTIFICATIONSST.PHP STYLING*/
@@ -382,7 +382,7 @@ div {
 .notificationop li i {
     display: block;
     float: right;
-    padding-left: 200px;
+    padding-left: 180px;
     color: black;
 }
 /*ACCESSIBILITYST.PHP STYLING*/
@@ -399,7 +399,7 @@ div {
 .accessibilityop li i {
     display: block;
     float: right;
-    padding-left: 240px;
+    padding-left: 220px;
     color: black;
 }
 /*CREATEPOST.PHP STYLING*/
