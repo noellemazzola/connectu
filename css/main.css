@@ -474,6 +474,18 @@ div {
 .eventtags button:hover {
     background-color: #6290c8;
 }
+.promotebutton {
+    display: block;
+    padding-left: 30px;
+    padding: 25px;
+    margin-top: 20px;
+}
+.promotebutton h5 {
+    font-size: 20px;
+    margin: 5px;
+    font-family: 'Franklin Gothic Medium';
+    text-decoration: none;
+}
 .createeb button {
     font-family: 'Helvetica';
     color: white;
@@ -486,22 +498,6 @@ div {
     width: 235px;
     margin-left: 100px;
     margin-bottom: 30px;
-}
-.promotebutton {
-    display: block!important;
-    padding-left: 35px;
-}
-.promotebutton h5 {
-    font-size: 20px;
-    margin: 5px;
-    font-family: 'Franklin Gothic Medium';
-    text-decoration: none;
-}
-.promotebutton input {
-    display: absolute;
-    margin: 0px;
-    margin-top: 10px;
-    bottom: 30px;
 }
 /*PROFILE.PHP STYLING*/
 .setgear {

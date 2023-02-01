@@ -1,6 +1,6 @@
 <?php include "templates/header.php>"?>
   <div class="back">
-    <i class="fa fa-chevron-left" style="font-size:36px" onclick="history.back()"></i>
+    <i class="bi bi-chevron-left" style="font-size:36px" onclick="history.back()"></i>
   </div>
 
     <div class="pagetitle">
