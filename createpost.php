@@ -17,7 +17,8 @@
         <input type="text" id="location" name="location" placeholder="Location"><br>
         <input type="text" id="description" name="description" placeholder="Description"><br>
       </form>
-
+      </div>
+      
       <div class="uploadimage">
         <h5>Upload Image:</h5>
         <h6>recommended size: 1080 x 1080</h6>
