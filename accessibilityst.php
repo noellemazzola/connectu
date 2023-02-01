@@ -9,12 +9,6 @@
 
         <div class="accessibilityop">
             <ul>
-                <li>Text Size
-                <a href=""><i class="bi bi-chevron-right" style="font-size:30px"></i></a></li>
-                
-                <li>Dark Mode
-                <a href=""><i class="bi bi-chevron-right" style="font-size:30px"></i></a></li>
-                
                 <li>Language
                 <a href=""><i class="bi bi-chevron-right" style="font-size:30px"></i></a></li>
             </ul>
