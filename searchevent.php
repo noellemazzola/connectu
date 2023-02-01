@@ -2,4 +2,7 @@
 
 <h1>search</h1>
 
-<?php include "templates/footer.php" ?>
+<?php 
+  include "templates/navbar.php>";
+  include "templates/footer.php>";
+?>
