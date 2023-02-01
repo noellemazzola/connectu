@@ -251,12 +251,12 @@ div {
 .settingsop li {
     font-family: 'Franklin Gothic Medium';
     font-size: 20px;
-    padding: 5px;
+    padding: 20px;
 }
 .settingsop li i {
     display: block;
     float: right;
-    padding-left: 200px;
+    padding-left: 180px;
     color: black;
 }
 .logout {
