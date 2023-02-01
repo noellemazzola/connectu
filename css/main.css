@@ -313,10 +313,6 @@ div {
 .profileinfo {
     display: block;
 }
-.profileinfo label {
-    font-family: 'Helvetica';
-    font-size: 20px;
-}
 .profileinfo input{
     font-family: 'Helvetica';
     font-size: 18px; 
@@ -415,10 +411,6 @@ div {
 .eventform {
     display: block;
 }
-.eventform label {
-    font-family: 'Helvetica';
-    font-size: 20px;
-}
 .eventform input{
     font-family: 'Helvetica';
     font-size: 18px; 
@@ -498,7 +490,6 @@ div {
 .promotebutton {
     display: block!important;
     padding-left: 35px;
-    padding: 35px;
 }
 .promotebutton h5 {
     font-size: 20px;
