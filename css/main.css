@@ -495,7 +495,23 @@ div {
     margin-left: 100px;
     margin-bottom: 30px;
 }
-
+.promotebutton {
+    display: block!important;
+    padding-left: 35px;
+    padding: 35px;
+}
+.promotebutton h5 {
+    font-size: 20px;
+    margin: 5px;
+    font-family: 'Franklin Gothic Medium';
+    text-decoration: none;
+}
+.promotebutton input {
+    display: absolute;
+    margin: 0px;
+    margin-top: 10px;
+    bottom: 30px;
+}
 /*PROFILE.PHP STYLING*/
 .setgear {
     float: right;
