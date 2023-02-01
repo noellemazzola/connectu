@@ -13,4 +13,7 @@
             </body>
     </html>
 
-<?php include "templates/footer.php" ?>
+    <?php 
+  include "templates/navbar.php>";
+  include "templates/footer.php>";
+?>
