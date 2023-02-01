@@ -60,8 +60,8 @@
         <h1 style="color:#5E2BFF;">Favorites</h1>
     </div>
     <div class="navbar">
-            <a href="/favorites/eventstab.php">EVENTS</a>
-            <a class="active" href="/favorites/clubstab.php"><b>CLUBS</b></a>
+            <a href="eventstab.php">EVENTS</a>
+            <a class="active" href="clubstab.php"><b>CLUBS</b></a>
     </div>
     <div class="clubs">
         <img src ="Images/clubs/anime-spot.jpg" alt="Anime spot">

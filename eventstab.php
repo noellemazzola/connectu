@@ -61,8 +61,8 @@
         <h1 style="color:#5E2BFF;">Favorites</h1>
     </div>
     <div class="navbar">
-            <a class="active" href="/favorites/eventstab.php"><b>EVENTS</b></a>
-            <a href="/favorites/clubstab.php">CLUBS</a>
+            <a class="active" href="eventstab.php"><b>EVENTS</b></a>
+            <a href="clubstab.php">CLUBS</a>
     </div>
     <h2>Tue, Jan 17</h2>
     <div class="event">
