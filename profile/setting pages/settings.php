@@ -23,21 +23,21 @@
         <div class="settingsop">
             <ul>
                 <li>Account Settings 
-                <a href="accountsetting.html"><i class="fa fa-chevron-right" style="font-size:30px"></i></a></li>
+                <a href="accountsetting.php"><i class="fa fa-chevron-right" style="font-size:30px"></i></a></li>
                 
                 <li>Privacy
-                <a href="privacysetting.html"><i class="fa fa-chevron-right" style="font-size:30px"></i></a></li>
+                <a href="privacysetting.php"><i class="fa fa-chevron-right" style="font-size:30px"></i></a></li>
                 
                 <li>Notifications
-                <a href="notificationsetting.html"><i class="fa fa-chevron-right" style="font-size:30px"></i></a></li>
+                <a href="notificationsetting.php"><i class="fa fa-chevron-right" style="font-size:30px"></i></a></li>
                 
                 <li>Accessibility
-                <a href="accessibilitysetting.html"><i class="fa fa-chevron-right" style="font-size:30px"></i></a></li>
+                <a href="accessibilitysetting.php"><i class="fa fa-chevron-right" style="font-size:30px"></i></a></li>
             </ul>
         </div>
 
         <div class="logout">
-            <a href="">Logout</a>
+            <a href="index.php">Logout</a>
         </div>
     </body>
 </html>

@@ -314,11 +314,11 @@ div {
     display: block;
 }
 .profileinfo label {
-    font-family: 'Helvetica light';
+    font-family: 'Helvetica';
     font-size: 20px;
 }
 .profileinfo input{
-    font-family: 'Helvetica light';
+    font-family: 'Helvetica';
     font-size: 18px; 
     padding: 10px;
     margin-bottom: 10px;
@@ -416,11 +416,11 @@ div {
     display: block;
 }
 .eventform label {
-    font-family: 'Helvetica light';
+    font-family: 'Helvetica';
     font-size: 20px;
 }
 .eventform input{
-    font-family: 'Helvetica light';
+    font-family: 'Helvetica';
     font-size: 18px; 
     padding: 10px;
     margin-bottom: 10px;
@@ -530,7 +530,7 @@ div {
     font-weight: normal;
 }
 .mainprofile h4 {
-    font-family: 'Helvetica light';
+    font-family: 'Helvetica';
     font-size: 18px;
     margin: 0px;
     font-weight: normal;
@@ -538,7 +538,7 @@ div {
     padding: 10px;
 }
 .mainprofile a {
-    font-family: 'Helvetica light';
+    font-family: 'Helvetica';
     color: #707070;
     background-color: white;
     text-decoration: none;
@@ -553,7 +553,7 @@ div {
     padding: 10px;
 }
 .friendslistbt a {
-    font-family: 'Helvetica light';
+    font-family: 'Helvetica';
     color: #707070;
     background-color: white;
     text-decoration: none;
@@ -595,7 +595,7 @@ div {
     font-weight: normal;
 }
 .clubprofile h4 {
-    font-family: 'Helvetica light';
+    font-family: 'Helvetica';
     font-size: 18px;
     font-weight: normal;
     text-align: center;
@@ -617,7 +617,7 @@ div {
     margin-left: 20px;
 }
 .clubprofile a {
-    font-family: 'Helvetica light';
+    font-family: 'Helvetica';
     color: #707070;
     background-color: white;
     text-decoration: none;
@@ -651,7 +651,7 @@ div {
     font-weight: normal;
 }
 .userprofile h4 {
-    font-family: 'Helvetica light';
+    font-family: 'Helvetica';
     font-size: 18px;
     font-weight: normal;
     text-align: center;
@@ -659,7 +659,7 @@ div {
     margin: 0px;
 }
 .userprofile a {
-    font-family: 'Helvetica light';
+    font-family: 'Helvetica';
     color: #707070;
     background-color: white;
     text-decoration: none;

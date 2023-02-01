@@ -13,8 +13,8 @@
 <body>
   <div class="clubicons">
     <div class="cicon">
-      <a href="createpost.html"><i class='fa fa-plus' style='font-size:36px'></i></a>
-      <a href="settings.html"><i class="fa fa-gear" style='font-size: 36px'></i></a>
+      <a href="createpost.php"><i class='fa fa-plus' style='font-size:36px'></i></a>
+      <a href="settings.php"><i class="fa fa-gear" style='font-size: 36px'></i></a>
     </div>
   </div>
 
@@ -29,7 +29,7 @@
             effectively cater to our diverse student body, and to the Orlando
             community.
         </h4>
-        <a href="profile.html">Switch Account</a>
+        <a href="profile.php">Switch Account</a>
         <ul>
           <li><i class='fa fa-youtube' style='font-size:36px'></i></li>
           <li><i class='fa fa-instagram' style='font-size:36px'></i></li>
