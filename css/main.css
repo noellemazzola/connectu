@@ -213,6 +213,77 @@ form input {
 .noti-group--desc {
     font-size: 12px;
     margin-bottom: 0;
+    max-width: 217px;
+}
+
+.noti-group--desc.club {
+    max-width: 180px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* SEARCH */
+.search-dropdown {
+    background-color: transparent;
+    color: #707070;
+    border-radius: 25px;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    font-size: 20px;
+}
+
+.search-dropdown:hover,
+.search-dropdown:active,
+.show>.btn-secondary.dropdown-toggle {
+    background-color: #5E2BFF;
+}
+
+.dropdown-menu {
+    border-radius: 18px;
+    border: 1px solid #000000;
+}
+
+.dropdown-item a {
+    color: inherit;
+}
+
+.dropdown-item a:hover {
+    text-decoration: none;
+}
+
+.dropdown-item:hover {
+    background-color: transparent;
+}
+
+.search-input {
+    border: 0;
+    border-bottom: 1px solid #000000;
+    background-color: transparent;
+    font-family: 'Franklin Gothic Medium',sans-serif;
+    font-size: 28px;
+    width: 60%;
+}
+
+.search-input:focus-visible {
+    outline: 0;
+}
+
+.filter-button {
+    border-radius: 25px;
+    background-color: #FFFFFF;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    font-size: 15px;
+    padding: 2px 9px;
+}
+
+.filter-button i {
+    font-size: 15px;
+}
+
+.search-results {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    font-size: 20px;
 }
 
 
