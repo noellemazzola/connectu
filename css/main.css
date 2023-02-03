@@ -819,7 +819,7 @@ div {
 /*footer input text message*/
     .footer_msg {
         padding: 20px; 
-        align:center;
+        text-align:center;
         font-size: 20px;  
     }
 /* Nav Bar for Events */
