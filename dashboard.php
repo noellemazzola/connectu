@@ -100,7 +100,7 @@
             <p class="event--date">Sun, Jan. 8 - 2PM</p>
             <p class="event--location">Addition Financial Arena</p>
             <div class="event--icons">
-                <i class="bi bi-person-check-fill"></i>
+            <a href="attendinglist.php"><i class='bi bi-person-check-fill' style='font-size:36px'></i></a>
                 <i class="bi bi-share"></i>
                 <i class="bi bi-heart"></i>
             </div>
