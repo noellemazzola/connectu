@@ -400,7 +400,7 @@ i.larger {
 
 
 /* clubs styling */
-.clubs {
+/* .clubs {
     border: 2px solid black;
     border-radius: 5px;
     padding: 10px;
@@ -411,6 +411,111 @@ i.larger {
     height: 20%;
     margin-right: 20px;
     border-radius: 50%;
+} */
+
+/* MESSAGES */
+.messages--header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #707070;
+    margin-bottom: 15px;
+}
+
+.messages--header img {
+    border-radius: 50%;
+    width: 100px;
+    border: 1px solid #707070;
+}
+
+.messages--name {
+    margin-left: 15px;
+}
+
+.messages--name .username {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.messages--name .full-name {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.messages--time {
+    font-size: 12px;
+    color: #707070;
+    font-family: Helvetica;
+    text-align: center;
+}
+
+.messages--container {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.messages--message {
+    color: #FFFFFF;
+    font-size: 14px;
+    border: 1px solid #707070;
+    border-radius: 50px;
+    max-width: 210px;
+    padding: 10px 20px;
+    margin-bottom: 0;
+}
+
+.messages--message.sent {
+    margin-left: auto;
+    margin-right: 15px;
+    background-color: #6290C8;
+}
+
+.messages--message.sent + p {
+    margin-right: 40px;
+    text-align: end;
+    font-size: 12px;
+    color: #707070;
+}
+
+.messages--message.received {
+    margin-right: auto;
+    margin-left: 15px;
+    background-color: #403D39;
+}
+
+.messages--bar {
+    background-color: #6290C8;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.messages--form {
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    border: 1px solid #707070;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.messages--input {
+    background-color: transparent;
+    border: none;
+    padding: 10px 5px 10px 15px;
+    margin: 0;
+}
+
+.messages--input:focus-visible {
+    outline: none;
+}
+
+.messages--send {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    margin-right: 10px;
 }
 
 
@@ -870,76 +975,3 @@ div {
 }
 }
 
-
-/* Message container - Person1 */
-.container1msg{
-    border: 2px solid #707070;
-    background-color: #6290C8;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0;
-    overflow: auto;
-  }
-  
-  /* Message container - Person2 */
-  .container2msg {
-    border-color: #707070;
-    background-color: #403D39;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0;
-    overflow: auto;
-  }
-  
-  /* Style Img - Person1 */
-  .container1msg img.Person1 {
-    float: left;
-    max-width: 60px;
-    margin-right: 20px;
-    border-radius: 50%;
-  }
-  
-  /* Style Img - Person2 */
-  .container2msg img.Person2 {
-    float: right;
-    margin-left: 20px;
-    border-radius: 50%;
-    max-width: 60px;
-  }
-  
-  /* Text from Person1 */
-  .message-sent1 {
-    float: right;
-    color: #FFFFFF;
-  }
-  
-  /* Text from Person2 */
-  .message-sent2 {
-    float: left;
-    color: #FFFFFF;
-  }
-
-  /* Header for Messages */
-  .header {
-  padding: 60px;
-  margin-bottom: 30px;
-  text-align: center;
-  background: #F2EFE9;
-  color: white;
-  font-size: 30px;
-}
-
-/* Profile Image */
-    .header img{
-    max-width: 200px;
-    width: auto;
-    float: left;
-    margin-left: 20px;
-    border-radius: 50%;
-    }
-/*footer input text message*/
-    .footer_msg {
-        padding: 20px; 
-        text-align:center;
-        font-size: 20px;  
-    }
