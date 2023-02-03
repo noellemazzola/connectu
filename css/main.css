@@ -141,6 +141,12 @@ form input {
 
 .event--title {
     font-weight: bold;
+    color: #000000;
+}
+
+.event--title:hover {
+    text-decoration: none;
+    color: #000000;
 }
 
 .event--icons {
