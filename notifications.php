@@ -4,7 +4,7 @@
     <h2>Notifications</h2>
 </div>
 <div class="px-4 d-flex justify-content-between align-items-center">
-    <h5 class="noti-group--title">Friends</h5>
+    <h5 class="noti-group--title">Friend Requests</h5>
     <i class="bi bi-circle-fill ml-auto" style="color: #5E2BFF; font-size: 15px"></i>
     <a href="#"><i class="bi bi-chevron-right"></i></a>
 </div>
