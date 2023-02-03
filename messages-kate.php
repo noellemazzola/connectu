@@ -173,7 +173,7 @@ html,body{
 <body>
     <div class="header">
     <h1 style="color:#5E2BFF;">Message</h1>
-    <img src="Images/profile/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="Picture of woman in red" class="Person2" class="header">
+    <img src="Images/profile/michael-dam-mEZ3PoFGs_k-unsplash.jpg" alt="Picture of woman in red" class="Person2" class="header">
     <p style="color:#5E2BFF;">@kate.zimmer</p>
     </div>
 
@@ -184,7 +184,7 @@ html,body{
     </div>
 
     <div class="container2msg">
-    <img src="Images/profile/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="Picture of woman in red" class="Person2">
+    <img src="Images/profile/michael-dam-mEZ3PoFGs_k-unsplash.jpg" alt="Picture of woman in red" class="Person2">
     <p style="color:#FFFFFF;">Yes I am! Would you like to go together?</p>
     <span class="message-sent2">5:25pm</span>
     </div>
@@ -196,7 +196,7 @@ html,body{
     </div>
 
     <div class="container2msg">
-    <img src="Images/profile/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt="Picture of woman in red" class="Person2">
+    <img src="Images/profile/michael-dam-mEZ3PoFGs_k-unsplash.jpg" alt="Picture of woman in red" class="Person2">
     <p style="color:#FFFFFF;">Can't wait see you there!</p>
     <span class="message-sent2">5:30pm</span>
     </div>
