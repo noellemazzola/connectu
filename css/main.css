@@ -26,6 +26,10 @@ h1, h2 {
     margin-top: 10px;
 }
 
+h2.black {
+    color: #000000;
+}
+
 i {
     font-size: 30px;
     color: black;
@@ -91,8 +95,11 @@ form input {
 }
 
 button.follow {
+    background-color: #5E2BFF;
+    color: #FFFFFF;
+    border: 1px solid #5E2BFF;
     text-transform: uppercase;
-    padding: 5px 10px;
+    padding: 5px 20px;
     font-family: 'Franklin Gothic Medium', sans-serif;
     font-size: 15px;
     border-radius: 50px;
@@ -101,12 +108,6 @@ button.follow {
 button.following {
     background-color: #FFFFFF;
     color: #5E2BFF;
-    border: 1px solid #5E2BFF;
-}
-
-button.unfollow {
-    background-color: #5E2BFF;
-    color: #FFFFFF;
     border: 1px solid #5E2BFF;
 }
 
