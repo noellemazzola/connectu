@@ -10,7 +10,7 @@
     <div class="userprofile">
         <h2>@kate.zimmer</h2>
         <h4>Class of 25' | Love to explore</h4>
-        <a href="messages.php">Message</a>
+        <a href="messages-kate.php">Message</a>
       </div>
 <?php 
   include "templates/navbar.php>";
