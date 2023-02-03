@@ -12,7 +12,7 @@
             <p class="mb-0 font-weight-bold">@kate.zimmer</p>
             <p class="noti-group--desc">Hey! I saw you were going to this event. Want to go together?</p>
         </div>
-        <i class="bi bi-chevron-right ml-auto"></i>
+        <a href="messages-kate.php"><i class="bi bi-chevron-right ml-auto"></i></a>
     </div>
     <div class="py-3 d-flex justify-content-between align-items-center">
         <img class="noti-group--img" src="Images/profile/christopher-campbell-rDEOVtE7vOs-unsplash.jpg">
