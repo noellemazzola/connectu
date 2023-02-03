@@ -36,7 +36,7 @@
       </div>
 
       <div class="promotebutton">
-        <h5>Promote Event</h5>
+        <h5>Promote Even</h5>
         <input type="checkbox">
     </div>
 
