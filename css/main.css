@@ -365,6 +365,54 @@ i.larger {
     font-size: 20px;
 }
 
+/* FAVORITES */
+.favorites--navbar {
+    -webkit-box-shadow: 0px 4px 6px 0px rgba(112,112,112,0.25);
+    -moz-box-shadow: 0px 4px 6px 0px rgba(112,112,112,0.25);
+    box-shadow: 0px 4px 6px 0px rgba(112,112,112,0.25);
+}
+
+.favorites--navbar a {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    text-align: center;
+    padding: 0 14px 16px;
+    font-size: 20px;
+    color: black;
+}
+
+.favorites--navbar a.active {
+    color: #5E2BFF;
+    text-decoration: underline 2px;
+    text-underline-offset: 23px;
+}
+
+.favorites--navbar a:hover {
+    text-decoration: underline 2px;
+    text-underline-offset: 23px;
+}
+
+.favorites--date {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    font-size: 25px;
+    color: #6290C8;
+    margin-top: 24px;
+}
+
+
+/* clubs styling */
+.clubs {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    overflow: auto;
+}
+.clubs img {
+    float: left;
+    height: 20%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
 
 @media screen and (max-width: 428px) {
 div {
@@ -420,8 +468,8 @@ div {
     border-style: solid;
     text-decoration: none;
     color: white;
-    border-color: #6290c8;
-    background-color: #6290c8;
+    border-color: #6290C8;
+    background-color: #6290C8;
     font-size: 20px;
     padding: 10px;
     padding-left: 35px;
@@ -475,8 +523,8 @@ div {
     border-style: solid;
     text-decoration: none;
     color: white;
-    border-color: #6290c8;
-    background-color: #6290c8;
+    border-color: #6290C8;
+    background-color: #6290C8;
     font-size: 16px;
     padding: 5px;
     padding-left: 15px;
@@ -493,8 +541,8 @@ div {
     border-style: solid;
     text-decoration: none;
     color: white;
-    border-color: #6290c8;
-    background-color: #6290c8;
+    border-color: #6290C8;
+    background-color: #6290C8;
     font-size: 20px;
     padding: 10px;
     padding-left: 35px;
@@ -622,7 +670,7 @@ div {
     border-width: 1px;
 }
 .eventtags button:hover {
-    background-color: #6290c8;
+    background-color: #6290C8;
 }
 .promotebutton {
     display: block;
@@ -639,8 +687,8 @@ div {
 .createeb button {
     font-family: 'Helvetica';
     color: white;
-    background-color: #6290c8;
-    border-color: #6290c8;
+    background-color: #6290C8;
+    border-color: #6290C8;
     border-style: none;
     text-align: center;
     font-size: 20px;
@@ -821,6 +869,8 @@ div {
     padding: 10px 100px
 }
 }
+
+
 /* Message container - Person1 */
 .container1msg{
     border: 2px solid #707070;
@@ -892,34 +942,4 @@ div {
         padding: 20px; 
         text-align:center;
         font-size: 20px;  
-    }
-/* Nav Bar for Events */
-      .navbar{
-        overflow:hidden;
-    }
-/* Style the links inside the navigation bar */
-    .navbar a {
-    text-align: center;
-    padding: 14px 16px;
-    font-size: 17px;
-    color: black;
-    }
-/* Add a color to the active/current link */
-    .navbar a.active {
-    color: #5E2BFF;
-    }
-
-
-/* clubs styling */
-    .clubs{
-        border: 2px solid black;
-        border-radius: 5px;
-        padding: 10px;
-        overflow: auto;
-    }
-    .clubs img {
-        float: left;
-        height: 20%;
-        margin-right: 20px;
-        border-radius: 50%;
     }
