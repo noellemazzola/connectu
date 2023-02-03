@@ -48,7 +48,6 @@ nav a i {
 }
 
 /* FORM */
-
 form {
     padding: 15px;
     text-align: center;
@@ -89,6 +88,26 @@ form input {
 
 .button a:hover {
     text-decoration: none;
+}
+
+button.follow {
+    text-transform: uppercase;
+    padding: 5px 10px;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    font-size: 15px;
+    border-radius: 50px;
+}
+
+button.following {
+    background-color: #FFFFFF;
+    color: #5E2BFF;
+    border: 1px solid #5E2BFF;
+}
+
+button.unfollow {
+    background-color: #5E2BFF;
+    color: #FFFFFF;
+    border: 1px solid #5E2BFF;
 }
 
 /* WELCOME */
@@ -159,6 +178,10 @@ form input {
     font-size: 15px;
 }
 
+i.larger {
+    font-size: 25px;
+}
+
 .scrolling-wrapper {
     display: flex;
     flex-wrap: nowrap;
@@ -171,6 +194,53 @@ form input {
 
 .scroll-item {
     flex: 0 0 90%;
+}
+
+/* EVENT PAGE */
+.details--title {
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium',sans-serif;
+    color: #5E2BFF;
+}
+
+.details--icon {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.details--info {
+    font-size: 17px;
+    font-family: "Helvetica", sans-serif;
+    margin-bottom: 0;
+}
+
+.details--details {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium',sans-serif;
+    margin-top: 20px;
+}
+
+.details--desc {
+    font-size: 15px;
+    font-family: "Helvetica";
+}
+
+.details--profile-pic {
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    border: 1px solid #707070;
+    width: 150px;
+}
+
+.details--club-name {
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium',sans-serif;
+}
+
+.details--more-events {
+    font-size: 22px;
+    font-family: 'Franklin Gothic Medium',sans-serif;
 }
 
 /* CLUB SPOTLIGHT */
