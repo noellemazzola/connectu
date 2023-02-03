@@ -30,14 +30,14 @@
         <h2>Upcoming Events</h2>
         <div class="event">
         <div class="event--grid-item">
-            <img class="event--img" src="Images/events/ucfvssmu.png"/>
+            <img class="event--img" src="Images/clubs/cab.jpeg"/>
         </div>
         <div class="event--info">
-            <p class="event--title">Men's Basketball Game: UCF vs. SMU</p>
+            <p class="event--title">CAB Presents: Get Involved Session</p>
             <p class="event--date">Sun, Jan. 8 - 2PM</p>
-            <p class="event--location">Addition Financial Arena</p>
+            <p class="event--location">Key West Ballroom</p>
             <div class="event--icons">
-                <i class="bi bi-person-check-fill"></i>
+            <a href="attendinglist.php"><i class='bi bi-person-check-fill'></i></a>
                 <i class="bi bi-share"></i>
                 <i class="bi bi-heart"></i>
             </div>
@@ -45,14 +45,14 @@
     </div>
     <div class="event">
         <div class="event--grid-item">
-            <img class="event--img" src="Images/events/ucfvssmu.png"/>
+            <img class="event--img" src="Images/clubs/cab.jpeg"/>
         </div>
         <div class="event--info">
-            <p class="event--title">Men's Basketball Game: UCF vs. SMU</p>
+            <p class="event--title">CAB Presents: Get Involved Session</p>
             <p class="event--date">Sun, Jan. 8 - 2PM</p>
-            <p class="event--location">Addition Financial Arena</p>
+            <p class="event--location">Key West Ballroom</p>
             <div class="event--icons">
-                <i class="bi bi-person-check-fill"></i>
+            <a href="attendinglist.php"><i class='bi bi-person-check-fill'></i></a>
                 <i class="bi bi-share"></i>
                 <i class="bi bi-heart"></i>
             </div>
@@ -60,14 +60,14 @@
     </div>
     <div class="event">
         <div class="event--grid-item">
-            <img class="event--img" src="Images/events/ucfvssmu.png"/>
+            <img class="event--img" src="Images/clubs/cab.jpeg"/>
         </div>
         <div class="event--info">
-            <p class="event--title">Men's Basketball Game: UCF vs. SMU</p>
+            <p class="event--title">CAB Presents: Get Involved Session</p>
             <p class="event--date">Sun, Jan. 8 - 2PM</p>
-            <p class="event--location">Addition Financial Arena</p>
+            <p class="event--location">Key West Ballroom</p>
             <div class="event--icons">
-                <i class="bi bi-person-check-fill"></i>
+            <a href="attendinglist.php"><i class='bi bi-person-check-fill'></i></a>
                 <i class="bi bi-share"></i>
                 <i class="bi bi-heart"></i>
             </div>
