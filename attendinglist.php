@@ -1,6 +1,6 @@
 <?php include "templates/header.php" ?>
 <div class="page-title">
-    <i class="bi bi-chevron-left" onclick="history.back()"></i>
+    <a class="back-arrow"><i class="bi bi-chevron-left" onclick="history.back()"></i></a>
     <h2>Attending List</h2>
 </div>
 <div class="d-block px-4 noti-group">

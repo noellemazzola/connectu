@@ -1,6 +1,6 @@
 <?php include "templates/header.php" ?>
 <div class="page-title">
-    <a class="back-arrow" href="searchclub.php"><i class="bi bi-chevron-left"></i></a>
+    <a class="back-arrow"><i class="bi bi-chevron-left" onclick="history.back()"></i></a>
 </div>
 <img class="details--profile-pic" src="images/clubs/cab.jpeg">
 

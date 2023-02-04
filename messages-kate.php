@@ -1,6 +1,6 @@
 <?php include "templates/header.php" ?>
 <div class="page-title">
-    <a class="back-arrow" href="dashboard.php"><i class="bi bi-chevron-left"></i></a>
+    <a class="back-arrow"><i class="bi bi-chevron-left" onclick="history.back()"></i></a>
     <h2>Messages</h2>
 </div>
 <div class="messages--header align-items-center px-4">

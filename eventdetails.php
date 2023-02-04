@@ -2,7 +2,7 @@
 <img class="w-100" src="Images/events/ucfvssmu.png"/>
 <main class="p-3">
     <div class="d-flex justify-content-between">
-        <a class="back-arrow" href="dashboard.php"><i class="bi bi-chevron-left"></i></a>
+        <a class="back-arrow"><i class="bi bi-chevron-left" onclick="history.back()"></i></a>
         <div class="event--icons">
             <a href="attendinglist.php"><i class="bi bi-person-check-fill larger"></i></a>
             <i class="bi bi-share larger"></i>
