@@ -14,7 +14,7 @@
         <i class="bi bi-search mr-2" style="color: #707070;"></i>
         <input class="search-input" type="text" placeholder="Search Events"/>
     </div>
-    <button class="d-block m-auto filter-button"><i class="bi bi-funnel"></i> Filter</button>
+    <button class="d-block m-auto filter-button"><a class="black-link" href="filters.php"><i class="bi bi-funnel"></i> Filter</a></button>
     <p class="search-results m-2">10 events</p>
 
     <div class="event">
