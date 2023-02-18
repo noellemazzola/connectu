@@ -2,7 +2,7 @@
 <main class="text-center p-4">
     <img class="logo" src="Images/logo.png" alt="ConnectU's logo; a Capital C with cartoon users inside of the letter">
     <h1>Welcome to ConnectU!</h1>
-    <button type="button"><a href="studentclub.php">Search your University</a></button>
+    <button class="" type="button"><a href="selectuniversity.php">Create an Account</a></button>
     <hr>
     <h5 class="welcome-account">Already have an account?</h5>
     <button class="button" type="button"><a href="login.php">Log In</a></button>
