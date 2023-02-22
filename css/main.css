@@ -72,6 +72,13 @@ form input {
     border: 1px solid #707070;
 }
 
+.input-warning {
+    display: block;
+    margin: -15px auto 20px;
+    font-size: 14px;
+    padding: 0 5px 0 0;
+}
+
 .button {
     padding: 10px 100px;
     background-color: #6290C8;
