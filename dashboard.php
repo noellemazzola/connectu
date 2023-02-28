@@ -1,6 +1,7 @@
 <?php 
     include "templates/header.php"; 
     include "database.php";
+    include "display.php";
 
 
     if (isset($_POST["student_fname"]) && isset($_POST["student_lname"]) && isset($_POST["student_gradyear"]) && isset($_POST["student_email"]) && isset($_POST["student_username"]) && isset($_POST["student_password"])) {
@@ -13,6 +14,11 @@
 
         database_connect();
         database_addStudent($first_name, $last_name, $grad_year, $email, $username, $password);
+
+        session_start();
+        $_SESSION["firstname"] = $first_name;
+        $_SESSION["lastname"] = $last_name;
+
         database_close();
     }
 
