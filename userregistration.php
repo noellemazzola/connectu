@@ -5,25 +5,25 @@
     <hr>
 
     <input type="text" placeholder="First Name" name="student_fname" id="student_fname" required>
-    <span class="input-warning"></span>
+    <span class="input-warning input-warning-student"></span>
 
     <input type="text" placeholder="Last Name" name="student_lname" id="student_lname" required>
-    <span class="input-warning"></span>
+    <span class="input-warning input-warning-student"></span>
 
     <input type="text" placeholder="Expected Graduation" name="student_gradyear" id="student_gradyear" required>
-    <span class="input-warning"></span>
+    <span class="input-warning input-warning-student"></span>
 
     <input type="email" placeholder="Email" name="student_email" id="student_email" required>
-    <span class="input-warning"></span>
+    <span class="input-warning input-warning-student"></span>
 
     <input type="text" placeholder="Username" name="student_username" id="student_username" required>
-    <span class="input-warning"></span>
+    <span class="input-warning input-warning-student"></span>
 
     <input type="password" placeholder="Password" name="student_password" id="student_password" required>
-    <span class="input-warning"></span>
+    <span class="input-warning input-warning-student"></span>
 
     <input type="password" placeholder="Repeat Password" name="student_repeat_password" id="student_repeat_password" required>
-    <span class="input-warning"></span>
+    <span class="input-warning input-warning-student"></span>
 
     <hr>
 

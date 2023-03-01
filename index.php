@@ -1,4 +1,9 @@
-<?php include "templates/header.php" ?>
+<?php
+    session_start();
+    unset($_SESSION);
+    session_destroy();
+    include "templates/header.php"     
+?>
 <main class="text-center p-4">
     <img class="logo" src="Images/logo.png" alt="ConnectU's logo; a Capital C with cartoon users inside of the letter">
     <h1>Welcome to ConnectU!</h1>

@@ -2,7 +2,27 @@
     include "templates/header.php"; 
     include "database.php";
     include "display.php";
+    
+    if (isset($_POST["login_username"]) && isset($_POST["login_password"])) {
+        $username = htmlspecialchars($_POST["login_username"]);
+        $password = htmlspecialchars($_POST["login_password"]);
+        
+        database_connect();
+        if (database_verifyUser($username, $password)) {
+            echo "<h2>im here</h2>";
+            // session_start();
+            if ($_SESSION["profile_type"] === "student") {
+                $_SESSION["firstname"] = database_getFirstName($username);
+                $_SESSION["lastname"] = database_getLastName($username);
+            }
 
+            if ($_SESSION["profile_type"] = "club") {
+                $_SESSION["clubname"] = database_getClubName($username);
+            }
+        }
+
+        database_close();
+    }
 
     if (isset($_POST["student_fname"]) && isset($_POST["student_lname"]) && isset($_POST["student_gradyear"]) && isset($_POST["student_email"]) && isset($_POST["student_username"]) && isset($_POST["student_password"])) {
         $first_name = htmlspecialchars($_POST["student_fname"]);
@@ -16,8 +36,27 @@
         database_addStudent($first_name, $last_name, $grad_year, $email, $username, $password);
 
         session_start();
+        $_SESSION["profile_type"] = "student";
         $_SESSION["firstname"] = $first_name;
         $_SESSION["lastname"] = $last_name;
+
+        database_close();
+    }
+
+    if (isset($_POST["club_name"]) && isset($_POST["club_president"]) && isset($_POST["club_email"]) && isset($_POST["club_phone"]) && isset($_POST["club_username"]) && isset($_POST["club_password"])) {
+        $name = htmlspecialchars($_POST["club_name"]);
+        $president = htmlspecialchars($_POST["club_president"]);
+        $email = htmlspecialchars($_POST["club_email"]);
+        $phone = htmlspecialchars($_POST["club_phone"]);
+        $username = htmlspecialchars($_POST["club_username"]);
+        $password = htmlspecialchars($_POST["club_password"]);
+
+        database_connect();
+        database_addClub($name, $president, $email, $phone, $username, $password);
+
+        session_start();
+        $_SESSION["profile_type"] = "club";
+        $_SESSION["clubname"] = $name;
 
         database_close();
     }
@@ -26,6 +65,7 @@
 <main class="p-3">
     <a href="notifications.php"><i class="bi bi-bell noti-bell"></i></a>
     <?php if (isset($_POST["student_fname"])) echo "<h2>Hello, $first_name</h2>"?>
+    <?php if (isset($_POST["club_name"])) echo "<h2>Hello, $name</h2>"?>
     <h2>Promoted Events</h2>
     <div class="scrolling-wrapper">
         <div class="scroll-item">

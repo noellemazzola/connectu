@@ -18,7 +18,13 @@
     <div class="mainprofile">
       <?php 
         session_start();
-        echo "<h2>@". $_SESSION["firstname"]. "." . $_SESSION["lastname"]. "</h2>";
+        if ($_SESSION["profile_type"] === "student") {
+          echo "<h2>@". $_SESSION["firstname"]. "." . $_SESSION["lastname"]. "</h2>";
+        }
+
+        if ($_SESSION["profile_type"] === "club") {
+          echo "<h2>". $_SESSION["clubname"] . "</h2>";
+        }
         // echo"<h4>$profile_bio</h4>"
       ?>
       <a href="clubprofile.php">Switch Account</a>
