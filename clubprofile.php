@@ -27,8 +27,8 @@
       </div>
 
     <div class="clubpost">
-        <h2>Upcoming Events</h2>
-        <div class="event">
+      <h2>Upcoming Events</h2>
+      <div class="event">
         <div class="event--grid-item">
             <img class="event--img" src="Images/clubs/cab.jpeg"/>
         </div>
