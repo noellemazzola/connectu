@@ -1,7 +1,7 @@
 <?php
     // global connection
     $connection = null;
-
+    
     // connect to database
     function database_connect() {
         global $connection;
@@ -54,7 +54,7 @@
             // echo "<h2>fetching...</h2>";
             
             // If $row is not null, it found row data.
-            if($row != null) {
+            if ($row != null) {
                 // Verify password against saved hash
                 echo "<h2>row has data: </h2>". $row["student_password"];
 
@@ -62,7 +62,7 @@
                     $status = true;
                     session_start();
                     $_SESSION["profile_type"] = "student";
-                    echo "<h2>user exists</h2>";
+                    echo "<h2>student user exists</h2>";
 
                 }
             }
@@ -83,7 +83,7 @@
                         $status = true;
                         session_start();
                         $_SESSION["profile_type"] = "club";
-                        echo "<h2>user exists</h2>";
+                        echo "<h2>club user exists</h2>";
 
                     }
                 }
@@ -139,7 +139,7 @@
         return $name;
     }
 
-    function database_getCLubName($username) {
+    function database_getClubName($username) {
         // Use the global connection
         global $connection;
 
@@ -160,6 +160,135 @@
         }
 
         return $name;
+    }
+
+    function database_getProfileImg($name, $profile_type) {
+        // Use the global connection
+        global $connection;
+        // echo "hi, $name -  you are a $profile_type";
+
+        // Create a default value
+        $imgURL = "Images/profile/default-profile-pic.png";
+
+        if($connection != null) {
+            // echo "connection made for profile";
+
+            if ($profile_type === "club") {
+                $results = mysqli_query($connection, "SELECT club_profile_img FROM clubs WHERE club_name = '{$name}' LIMIT 1;");
+                $row = mysqli_fetch_assoc($results);
+            
+                if ($row != null) {
+                    $imgURL = $row["club_profile_img"];
+                }
+            }
+            
+            if ($profile_type === "student") {
+                $results = mysqli_query($connection, "SELECT student_profile_img FROM students WHERE student_fname = '{$name}' LIMIT 1;");
+                $row = mysqli_fetch_assoc($results);
+                
+                if ($row != null) {
+                    // echo "row has data";
+                    $imgURL = $row["student_profile_img"];
+                    // echo "IMGURL IS $imgURL";
+                }
+            }
+        }
+
+        return $imgURL;
+    }
+
+    function database_getBio($name, $profile_type) {
+        // Use the global connection
+        global $connection;
+
+        // Create a default value
+        $bio = "";
+
+        if($connection != null) {
+            // echo "connection made for bio";
+
+            if ($profile_type === "club") {
+                $results = mysqli_query($connection, "SELECT club_profile_bio FROM clubs WHERE club_name = '{$name}' LIMIT 1;");
+                $row = mysqli_fetch_assoc($results);
+            
+                if ($row != null) {
+                    $bio = $row["club_profile_bio"];
+                }
+            }
+            
+            if ($profile_type === "student") {
+                $results = mysqli_query($connection, "SELECT student_desc FROM students WHERE student_fname = '{$name}' LIMIT 1;");
+                $row = mysqli_fetch_assoc($results);
+                
+                if ($row != null) {
+                    // echo "row has data";
+                    $bio = $row["student_desc"];
+                    // echo "BIO IS $bio";
+                }
+            }
+        }
+
+        return $bio;
+    }
+    
+    function database_getClubEvents($clubname) {
+        // Use the global connection
+        global $connection;
+
+        if($connection != null) {
+            $query = "SELECT * FROM events WHERE event_organization = '{$clubname}'";
+            $results = mysqli_query($connection, $query);
+            
+            // If $row is not null, it found row data.
+            if($results && mysqli_num_rows($results) > 0) {
+                return $results;
+            }
+        }
+    }
+
+    function database_getAllEvents() {
+        // Use the global connection
+        global $connection;
+
+        if($connection != null) {
+            $query = "SELECT * FROM events";
+            $results = mysqli_query($connection, $query);
+            
+            // If $row is not null, it found row data.
+            if($results && mysqli_num_rows($results) > 0) {
+                return $results;
+            }
+        }
+    }
+
+    function database_getPromotedEvents() {
+        // Use the global connection
+        global $connection;
+
+        if($connection != null) {
+            $query = "SELECT * FROM events WHERE is_promoted = true";
+            $results = mysqli_query($connection, $query);
+            
+            // If $row is not null, it found row data.
+            if($results && mysqli_num_rows($results) > 0) {
+                return $results;
+            }
+        }
+    }
+
+    function database_getClubSpotlight() {
+        // Use the global connection
+        global $connection;
+
+        if($connection != null) {
+            $query = "SELECT club_name, club_profile_img FROM clubs WHERE has_spotlight = true";
+            $results = mysqli_query($connection, $query);
+            
+            // If $row is not null, it found row data.
+            if($results && mysqli_num_rows($results) > 0) {
+                return $results;
+            }
+        }
     }
 
 

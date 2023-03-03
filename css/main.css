@@ -277,6 +277,7 @@ i.larger {
 /* CLUB SPOTLIGHT */
 .club-spotlight .scroll-item {
     flex: 0 0 45%;
+    display: block;
 }
 
 .spotlight {
