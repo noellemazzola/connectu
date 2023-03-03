@@ -291,6 +291,48 @@
         }
     }
 
+    function database_getEventsFromQuery($event_query) {
+        // Use the global connection
+        global $connection;
+
+        if($connection != null) {
+            if ($event_query === "")
+                $query = "SELECT * FROM events";
+            else
+                $query = "SELECT * FROM events WHERE (`event_name` LIKE '%".$event_query."%') OR (`event_desc` LIKE '%".$event_query."%') OR (`event_organization` LIKE '%".$event_query."%')";
+            $results = mysqli_query($connection, $query);
+            
+            // If $row is not null, it found row data.
+            if($results && mysqli_num_rows($results) > 0) {
+                return $results;
+            }
+            else {
+                echo "<p class='search-results text-center mt-5'>no events match your search</p>";
+            }
+        }
+    }
+
+    function database_getClubsFromQuery($club_query) {
+        // Use the global connection
+        global $connection;
+
+        if($connection != null) {
+            if ($club_query === "")
+                $query = "SELECT * FROM clubs";
+            else
+                $query = "SELECT * FROM clubs WHERE (`club_name` LIKE '%".$club_query."%') OR (`club_profile_bio` LIKE '%".$club_query."%')";
+            $results = mysqli_query($connection, $query);
+            
+            // If $row is not null, it found row data.
+            if($results && mysqli_num_rows($results) > 0) {
+                return $results;
+            }
+            else {
+                echo "<p class='search-results text-center mt-5'>no clubs match your search</p>";
+            }
+        }
+    }
+
 
 
 

@@ -366,6 +366,11 @@ i.larger {
     background-color: transparent;
 }
 
+form#search_event_form,
+form#search_club_form {
+    display: contents;
+}
+
 .search-input {
     border: 0;
     border-bottom: 1px solid #000000;
