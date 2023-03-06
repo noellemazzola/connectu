@@ -27,7 +27,7 @@
             <input class="search-input" type="text" name="club_query" placeholder="Search Clubs"/>
         </form>
     </div>
-    <button class="d-block m-auto filter-button"><a class="black-link" href="filters.php"><i class="bi bi-funnel"></i> Filter</a></button>
+    <button class="d-block m-auto filter-button"><a class="black-link" href="filterclub.php"><i class="bi bi-funnel"></i> Filter</a></button>
     <?php 
         database_connect();
         display_searchClubs($_SESSION["club_query"]);

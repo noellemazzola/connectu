@@ -27,7 +27,7 @@
             <input class="search-input" type="text" name="event_query" placeholder="Search Events" />
         </form>
     </div>
-    <button class="d-block m-auto filter-button"><a class="black-link" href="filters.php"><i class="bi bi-funnel"></i> Filter</a></button>
+    <button class="d-block m-auto filter-button"><a class="black-link" href="filterevent.php"><i class="bi bi-funnel"></i> Filter</a></button>
     <?php 
         database_connect();
         display_searchEvents($_SESSION["event_query"]);
