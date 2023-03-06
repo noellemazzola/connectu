@@ -22,7 +22,7 @@
             }
         }
 
-        database_close();
+        // database_close();
     }
 
     if (isset($_POST["student_fname"]) && isset($_POST["student_lname"]) && isset($_POST["student_gradyear"]) && isset($_POST["student_email"]) && isset($_POST["student_username"]) && isset($_POST["student_password"])) {
@@ -41,7 +41,7 @@
         $_SESSION["firstname"] = $first_name;
         $_SESSION["lastname"] = $last_name;
 
-        database_close();
+        // database_close();
     }
 
     if (isset($_POST["club_name"]) && isset($_POST["club_president"]) && isset($_POST["club_email"]) && isset($_POST["club_phone"]) && isset($_POST["club_username"]) && isset($_POST["club_password"])) {
@@ -59,7 +59,7 @@
         $_SESSION["profile_type"] = "club";
         $_SESSION["clubname"] = $name;
 
-        database_close();
+        // database_close();
     }
 
 ?>
@@ -70,7 +70,7 @@
     <h2>Promoted Events</h2>
     <div class="scrolling-wrapper">
         <?php 
-            database_connect();
+            // database_connect();
             display_events("promoted", "");
         ?>
         <!-- <div class="scroll-item">

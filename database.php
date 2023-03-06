@@ -22,7 +22,8 @@
         global $connection;
 
         if ($connection != null) {
-            $query = "INSERT INTO students (student_fname, student_lname, student_gradyear, student_email, student_username, student_password) VALUES ('$first_name', '$last_name', '$grad_year', '$email', '$username', '$password')";
+            $query = "INSERT INTO students (student_fname, student_lname, student_gradyear, student_email, student_username, student_password) 
+                        VALUES ('$first_name', '$last_name', '$grad_year', '$email', '$username', '$password')";
             return mysqli_query($connection, $query);
         }
     }
@@ -31,8 +32,24 @@
         global $connection;
 
         if ($connection != null) {
-            $query = "INSERT INTO clubs (club_name, club_president, club_email, club_phone, club_username, club_password) VALUES ('$name', '$president', '$email', '$phone', '$username', '$password')";
+            $query = "INSERT INTO clubs (club_name, club_president, club_email, club_phone, club_username, club_password) 
+                        VALUES ('$name', '$president', '$email', '$phone', '$username', '$password')";
             return mysqli_query($connection, $query);
+        }
+    }
+
+    function database_addEvent($name, $start_date, $start_time, $end_date, $end_time, $location, $description, $imgURL, $tags, $organization, $is_promoted) {
+        global $connection;
+
+        if ($connection != null) {
+            // echo "there is a connection";
+            // echo "the event name is $name and it on $start_date at $start_time; ends on $end_date at $end_time \nlocated at $location, this event will $description\n has this image: $imgURL, these tags: $tags\n $organization decided to $is_promoted <-";
+            $query = "INSERT INTO events (event_name, event_start_date, event_start_time, event_end_date, event_end_time, event_location, event_desc, event_img, event_tags, event_organization, is_promoted) 
+                        VALUES ('$name', '$start_date', '$start_time', '$end_date', '$end_time', '$location', '$description', '$imgURL', '$tags', '$organization', '$is_promoted')";
+            // echo "about to return";
+            $retval = mysqli_query($connection, $query);
+            // echo "the return value is $retval";
+            return $retval;
         }
     }
 
@@ -421,3 +438,5 @@
             mysqli_close($connection);
         }
     }
+
+    ?>

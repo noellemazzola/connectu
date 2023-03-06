@@ -8,14 +8,51 @@
     </div>
 
     <div class="eventform">
-      <form>
-        <input type="text" id="title" name="title" placeholder="Title"><br>
-        <input type="text" id="sdate" name="sdate" placeholder="Start Date"><br>
-        <input type="text" id="stime" name="stime" placeholder="Start Time"><br>
-        <input type="text" id="edate" name="edate" placeholder="End Date"><br>
-        <input type="text" id="etime" name="etime" placeholder="End Time"><br>
-        <input type="text" id="location" name="location" placeholder="Location"><br>
-        <input type="text" id="description" name="description" placeholder="Description"><br>
+      <form action="profile.php" method="POST" id="create_event_form" enctype="multipart/form-data">
+        <input type="text" placeholder="Title" name="event_name" id="event_name" required><br>
+        <span class="input-warning input-warning-create"></span>
+
+        <input type="text" placeholder="Start Date" name="event_start_date" id="event_start_date" required><br>
+        <span class="input-warning input-warning-create"></span>
+
+        <input type="text" placeholder="Start Time" name="event_start_time" id="event_start_time" required><br>
+        <span class="input-warning input-warning-create"></span>
+
+        <input type="text" placeholder="End Date" name="event_end_date" id="event_end_date"><br>
+        <span class="input-warning input-warning-create"></span>
+
+        <input type="text" placeholder="End Time" name="event_end_time" id="event_end_time"><br>
+        <span class="input-warning input-warning-create"></span>
+
+        <input type="text" placeholder="Location" name="event_location" id="event_location" required><br>
+        <span class="input-warning input-warning-create"></span>
+
+        <input type="text" placeholder="Description" name="event_desc" id="event_desc" required><br>
+        <span class="input-warning input-warning-create"></span>
+
+        <label for="event_img">Upload Image:<br>recommended size: 1080 x 1080 px</label>
+        <input type="file" name="event_img" id="event_img" accept="image/png, image/jpeg, image/jpg" value="">
+
+        <h5>Tags</h5>
+        <div class="d-block">
+        <input class="" type="checkbox" name="event_tags[]" id="event_tags_social" value="social">
+        <label for="event_tags_social">Social</label><br>
+
+        <input class="" type="checkbox" name="event_tags[]" id="event_tags_music" value="music">
+        <label for="event_tags_music">Music</label><br>
+
+        <input class="" type="checkbox" name="event_tags[]" id="event_tags_sports" value="sports">
+        <label for="event_tags_sports">Sports</label><br>
+
+        <input class="" type="checkbox" name="event_tags[]" id="event_tags_gbm" value="gbm">
+        <label for="event_tags_gbm">GBM</label><br>
+        </div>
+
+        <input class="" type="checkbox" name="is_promoted" id="is_promoted" checked=true>
+        <label for="is_promoted">Promote Event</label><br>
+
+        <button class="button" type="submit">Create Event</button>
+
       </form>
       </div>
       

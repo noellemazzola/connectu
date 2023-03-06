@@ -7,6 +7,53 @@
 
   session_start();
   if ($_SESSION["profile_type"] === "club") {
+    if (isset($_POST["event_name"]) && isset($_POST["event_start_date"]) && isset($_POST["event_start_time"]) && isset($_POST["event_location"]) && isset($_POST["event_desc"])) {
+      $name = htmlspecialchars($_POST["event_name"]);
+      $start_date = htmlspecialchars($_POST["event_start_date"]);
+      $start_time = htmlspecialchars($_POST["event_start_time"]);
+      $end_date = (isset($_POST["event_end_date"])) ? htmlspecialchars($_POST["event_end_date"]) : "";
+      $end_time = (isset($_POST["event_end_time"])) ? htmlspecialchars($_POST["event_end_time"]) : "";
+      $location = htmlspecialchars($_POST["event_location"]);
+      $description = htmlspecialchars($_POST["event_desc"]);
+      $imgURL = "Images/events/default-event-img.png";
+      
+      // if (isset($_POST["event_img"])) {
+        // echo "we in here turn up turn up";  
+        $og_img_filepath = $_FILES["event_img"]["name"];
+        $tempname = $_FILES["event_img"]["tmp_name"];
+        $new_img_filepath = "Images/events/" . $og_img_filepath;
+
+        if (move_uploaded_file($tempname, $new_img_filepath)) {
+          $imgURL = $new_img_filepath;
+        }
+        // else
+        //   echo "the image didnt move";
+      // }
+      // echo "$imgURL";
+
+      
+      $tags = "";
+      $tagsArray = (isset($_POST["event_tags"])) ? $_POST["event_tags"] : array();
+      if (count($tagsArray) > 0) {
+        foreach($tagsArray as $tag) {
+          $tags .= $tag . ", ";
+        }
+      }
+
+      $organization = $_SESSION["clubname"];
+      $is_promoted = isset($_POST["is_promoted"]) ? true : false;
+      // echo "$is_promoted";
+
+      database_addEvent($name, $start_date, $start_time, $end_date, $end_time, $location, $description, $imgURL, $tags, $organization, $is_promoted);
+    }
+
+
+
+
+
+
+
+
     echo "
       <div class='clubicons'>
         <div class='cicon'>
