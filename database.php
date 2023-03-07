@@ -298,7 +298,7 @@
         global $connection;
 
         if($connection != null) {
-            $query = "SELECT club_name, club_profile_img FROM clubs WHERE has_spotlight = true";
+            $query = "SELECT id, club_name, club_profile_img FROM clubs WHERE has_spotlight = true";
             $results = mysqli_query($connection, $query);
             
             // If $row is not null, it found row data.
@@ -346,6 +346,50 @@
             }
             else {
                 echo "<p class='search-results text-center mt-5'>no clubs match your search</p>";
+            }
+        }
+    }
+
+    function database_getEventInfo($event_id) {
+        // Use the global connection
+        global $connection;
+
+        // Create a default value
+        // $name = "";
+
+        if($connection != null) {
+            // Use WHERE expressions to look for username
+            $results = mysqli_query($connection, "SELECT * FROM events WHERE id = '{$event_id}' ;");
+            
+            // mysqli_fetch_assoc() returns either null or row data
+            $row = mysqli_fetch_assoc($results);
+            
+            // If $row is not null, it found row data.
+            if($row != null) {
+                echo "row has data";
+                return $row;
+            }
+        }
+    }
+
+    function database_getClubInfo($club_id) {
+        // Use the global connection
+        global $connection;
+
+        // Create a default value
+        // $name = "";
+
+        if($connection != null) {
+            // Use WHERE expressions to look for username
+            $results = mysqli_query($connection, "SELECT * FROM clubs WHERE id = '{$club_id}' ;");
+            
+            // mysqli_fetch_assoc() returns either null or row data
+            $row = mysqli_fetch_assoc($results);
+            
+            // If $row is not null, it found row data.
+            if($row != null) {
+                echo "row has data";
+                return $row;
             }
         }
     }

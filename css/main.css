@@ -288,6 +288,14 @@ i.larger {
     max-width: 130px;
 }
 
+.spotlight--link {
+    color: #000000;
+}
+
+.spotlight--link:hover {
+    text-decoration: none;
+}
+
 .spotlight--img {
     border-radius: 50%;
     width: 125px;
@@ -296,7 +304,8 @@ i.larger {
 
 .spotlight--club-name {
     text-align: center;
-    font-size: 20px;
+    /* font-size: 20px; */
+    color: #000000;
 }
 
 /* NOTIFICATIONS */

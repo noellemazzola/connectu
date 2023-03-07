@@ -13,6 +13,7 @@ function display_events($event_type, $clubname) {
         $results = database_getClubEvents($clubname);
 
     while ($events = mysqli_fetch_assoc($results)) {
+        $eventPageURL = "event.php?id=" . $events["id"];
         if ($event_type === "promoted") echo "<div class='scroll-item'>";
         echo "
             <div class='event'>
@@ -20,7 +21,7 @@ function display_events($event_type, $clubname) {
                     <img class='event--img' src='{$events['event_img']}'/>
                 </div>
                 <div class='event--info'>
-                    <p class='event--title'>{$events['event_name']}</p>
+                    <a class='event--title' href=$eventPageURL>{$events['event_name']}</a>
                     <p class='event--date'>{$events['event_start_date']} - {$events['event_start_time']}</p>
                     <p class='event--location'>{$events['event_location']}</p>
                     <div class='event--icons'>
@@ -41,11 +42,14 @@ function display_clubSpotlight() {
     $results = database_getClubSpotlight();
 
     while ($clubs = mysqli_fetch_assoc($results)) {
+        $clubPageURL = "club.php?id=" . $clubs["id"];
         echo "
             <div class='scroll-item'>
                 <div class='spotlight'>
-                    <img class='spotlight--img' src='{$clubs['club_profile_img']}'/>
-                    <p class='spotlight--club-name'>{$clubs['club_name']}</p>
+                    <a class='spotlight--link' href=$clubPageURL>
+                        <img class='spotlight--img' src='{$clubs['club_profile_img']}'/>
+                        <p class='spotlight--club-name'>{$clubs['club_name']}</p>
+                    </a>
                 </div>
             </div>
         ";
@@ -59,15 +63,16 @@ function display_searchEvents($query) {
         $num_results = mysqli_num_rows($results);
         
         echo "<p class='search-results m-2'>$num_results events</p>";
-    
+        
         while ($events = mysqli_fetch_assoc($results)) {
+            $eventPageURL = "event.php?id=" . $events["id"];
             echo "
                 <div class='event'>
                     <div class='event--grid-item'>
                         <img class='event--img' src='{$events['event_img']}'/>
                     </div>
                     <div class='event--info'>
-                        <p class='event--title'>{$events['event_name']}</p>
+                        <a class='event--title' href=$eventPageURL>{$events['event_name']}</a>
                         <p class='event--date'>{$events['event_start_date']} - {$events['event_start_time']}</p>
                         <p class='event--location'>{$events['event_location']}</p>
                         <div class='event--icons'>
@@ -93,11 +98,12 @@ function display_searchClubs($query) {
         echo "<hr class='noti-hr'>";
     
         while ($clubs = mysqli_fetch_assoc($results)) {
+            $clubPageURL = "club.php?id=" . $clubs["id"];
             echo "
                 <div class='py-2 px-4 d-flex justify-content-between align-items-center'>
                     <img class='noti-group--img' src='{$clubs['club_profile_img']}'>
                     <p class='noti-group--desc club'>{$clubs['club_profile_bio']}</p>
-                    <a href='clubdetails.php'><i class='bi bi-chevron-right ml-auto'></i></a>
+                    <a href=$clubPageURL><i class='bi bi-chevron-right ml-auto'></i></a>
                 </div>
                 <hr class='noti-hr'>
             ";
@@ -105,3 +111,5 @@ function display_searchClubs($query) {
         echo "</div>";
     }
 }
+
+?>
