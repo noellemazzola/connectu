@@ -9,6 +9,26 @@
     if (isset($_POST["event_query"])) {
         $_SESSION["event_query"] = htmlspecialchars($_POST["event_query"]);
     }
+
+    $tags = "";
+
+    $tagsArray = (isset($_POST["filter_categories"])) ? $_POST["filter_categories"] : array();
+    if (count($tagsArray) > 0) {
+        foreach($tagsArray as $tag) {
+            $tags .= $tag . " , ";
+        }
+    }
+
+    $tagsArray = (isset($_POST["filter_campus"])) ? $_POST["filter_campus"] : array();
+    if (count($tagsArray) > 0) {
+        foreach($tagsArray as $tag) {
+            $tags .= $tag . " , ";
+        }
+    }
+
+    $_SESSION["event_tags"] = $tags;
+
+    echo "the search is " . $_SESSION["event_query"] . " and the filters are $tags";
 ?>
 
 <main class="pt-4 px-2">
@@ -30,7 +50,7 @@
     <button class="d-block m-auto filter-button"><a class="black-link" href="filterevent.php"><i class="bi bi-funnel"></i> Filter</a></button>
     <?php 
         database_connect();
-        display_searchEvents($_SESSION["event_query"]);
+        display_searchEvents($_SESSION["event_query"], $_SESSION["event_tags"]);
         database_close();
     ?>
 

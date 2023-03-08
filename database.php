@@ -308,15 +308,36 @@
         }
     }
 
-    function database_getEventsFromQuery($event_query) {
+    function database_getEventsFromQuery($event_query, $filters) {
         // Use the global connection
         global $connection;
 
         if($connection != null) {
-            if ($event_query === "")
+            if ($event_query === "" && $filters === "") {
                 $query = "SELECT * FROM events";
-            else
-                $query = "SELECT * FROM events WHERE (`event_name` LIKE '%".$event_query."%') OR (`event_desc` LIKE '%".$event_query."%') OR (`event_organization` LIKE '%".$event_query."%')";
+                // echo "neither";
+            }
+            else if ($event_query && $filters) {
+                $query = "SELECT * FROM events 
+                    WHERE ((`event_name` LIKE '%".$event_query."%') 
+                        OR (`event_desc` LIKE '%".$event_query."%') 
+                        OR (`event_organization` LIKE '%".$event_query."%'))
+                        AND MATCH(event_tags) AGAINST($filters)";
+                // echo "search and filter";
+            }
+            else if ($event_query) {
+                $query = "SELECT * FROM events 
+                    WHERE (`event_name` LIKE '%".$event_query."%') 
+                        OR (`event_desc` LIKE '%".$event_query."%') 
+                        OR (`event_organization` LIKE '%".$event_query."%')";
+                // echo "search";
+            }
+            else if ($filters) {
+                $query = "SELECT * FROM events WHERE MATCH(event_tags) AGAINST('$filters')";
+                // echo "filter";
+            }
+            
+            // echo "the query is $query";
             $results = mysqli_query($connection, $query);
             
             // If $row is not null, it found row data.
@@ -329,15 +350,26 @@
         }
     }
 
-    function database_getClubsFromQuery($club_query) {
+    function database_getClubsFromQuery($club_query, $filters) {
         // Use the global connection
         global $connection;
 
         if($connection != null) {
-            if ($club_query === "")
+            if ($club_query === "" && $filters === "")
                 $query = "SELECT * FROM clubs";
-            else
-                $query = "SELECT * FROM clubs WHERE (`club_name` LIKE '%".$club_query."%') OR (`club_profile_bio` LIKE '%".$club_query."%')";
+            else if ($club_query && $filters)
+                $query = "SELECT * FROM clubs 
+                            WHERE ((`club_name` LIKE '%".$club_query."%') 
+                            OR (`club_profile_bio` LIKE '%".$club_query."%'))
+                            AND MATCH(club_tags) AGAINST('$filters')";
+            else if ($club_query)
+                $query = "SELECT * FROM clubs 
+                            WHERE (`club_name` LIKE '%".$club_query."%') 
+                            OR (`club_profile_bio` LIKE '%".$club_query."%')";
+            else if ($filters)
+                $query = "SELECT * FROM events WHERE MATCH(club_tags) AGAINST('$filters')";
+
+
             $results = mysqli_query($connection, $query);
             
             // If $row is not null, it found row data.

@@ -49,11 +49,6 @@
 
 
 
-
-
-
-
-
     echo "
       <div class='clubicons'>
         <div class='cicon'>

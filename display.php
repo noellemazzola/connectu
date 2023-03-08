@@ -56,8 +56,8 @@ function display_clubSpotlight() {
     }
 }
 
-function display_searchEvents($query) {
-    $results = database_getEventsFromQuery($query);
+function display_searchEvents($query, $filters) {
+    $results = database_getEventsFromQuery($query, $filters);
 
     if ($results !== null) {
         $num_results = mysqli_num_rows($results);
@@ -87,8 +87,8 @@ function display_searchEvents($query) {
     }
 }
 
-function display_searchClubs($query) {
-    $results = database_getClubsFromQuery($query);
+function display_searchClubs($query, $filters) {
+    $results = database_getClubsFromQuery($query, $filters);
 
     if ($results !== null) {
         $num_results = mysqli_num_rows($results);
