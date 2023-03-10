@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="css/main.css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
         <!-- js -->
-        <script src="js/script.js"></script>
+        <!-- <script src="js/script.js"></script>
+        <script src="js/messages.js"></script> -->
     </head>
     <body>

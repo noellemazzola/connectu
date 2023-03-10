@@ -6,6 +6,7 @@
     if (isset($_POST["login_username"]) && isset($_POST["login_password"])) {
         $username = htmlspecialchars($_POST["login_username"]);
         $password = htmlspecialchars($_POST["login_password"]);
+        $_SESSION["loggedIn"] = true;
         
         database_connect();
         if (database_verifyUser($username, $password)) {

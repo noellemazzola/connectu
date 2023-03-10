@@ -10,50 +10,50 @@
         <img class="noti-group--img" src="Images/profile/michael-dam-mEZ3PoFGs_k-unsplash.jpg">
         <div class="d-block">
             <p class="mb-0 font-weight-bold">@kate.zimmer</p>
-            <p class="noti-group--desc">Hey! I saw you were going to this event. Want to go together?</p>
+            <p class="noti-group--desc">Can't wait see you there!</p>
         </div>
         <a href="messages-kate.php"><i class="bi bi-chevron-right ml-auto"></i></a>
     </div>
-    <div class="py-3 d-flex justify-content-between align-items-center">
+    <!-- <div class="py-3 d-flex justify-content-between align-items-center">
         <img class="noti-group--img" src="Images/profile/christopher-campbell-rDEOVtE7vOs-unsplash.jpg">
         <div class="d-block">
             <p class="mb-0 font-weight-bold">@natalie.rexar</p>
-            <p class="noti-group--desc">Hey! I saw you were going to this event. Want to go together?</p>
+            <p class="noti-group--desc">Can't wait see you there!</p>
         </div>
         <i class="bi bi-chevron-right ml-auto"></i>
-    </div>
-    <div class="py-3 d-flex justify-content-between align-items-center">
+    </div> -->
+    <!-- <div class="py-3 d-flex justify-content-between align-items-center">
         <img class="noti-group--img" src="Images/profile/darshan-patel-QJEVpydulGs-unsplash.jpg">
         <div class="d-block">
             <p class="mb-0 font-weight-bold">@kyle.cao</p>
             <p class="noti-group--desc">Hey! I saw you were going to this event. Want to go together?</p>
         </div>
         <i class="bi bi-chevron-right ml-auto"></i>
-    </div>
-    <div class="py-3 d-flex justify-content-between align-items-center">
+    </div> -->
+    <!-- <div class="py-3 d-flex justify-content-between align-items-center">
         <img class="noti-group--img" src="Images/profile/karabo-mdluli-Y7TEMCKRIgI-unsplash.jpg">
         <div class="d-block">
             <p class="mb-0 font-weight-bold">@jordan.king</p>
             <p class="noti-group--desc">Hey! I saw you were going to this event. Want to go together?</p>
         </div>
         <i class="bi bi-chevron-right ml-auto"></i>
-    </div>
-    <div class="py-3 d-flex justify-content-between align-items-center">
+    </div> -->
+    <!-- <div class="py-3 d-flex justify-content-between align-items-center">
         <img class="noti-group--img" src="Images/profile/dillon-kydd-J6MK67MIs0I-unsplash.jpg">
         <div class="d-block">
             <p class="mb-0 font-weight-bold">@andrea.hernandez</p>
             <p class="noti-group--desc">Hey! I saw you were going to this event. Want to go together?</p>
         </div>
         <i class="bi bi-chevron-right ml-auto"></i>
-    </div>
-    <div class="py-3 d-flex justify-content-between align-items-center">
+    </div> -->
+    <!-- <div class="py-3 d-flex justify-content-between align-items-center">
         <img class="noti-group--img" src="Images/profile/alexander-hipp-iEEBWgY_6lA-unsplash.jpg">
         <div class="d-block">
             <p class="mb-0 font-weight-bold">@brad.krawford</p>
             <p class="noti-group--desc">Hey! I saw you were going to this event. Want to go together?</p>
         </div>
         <i class="bi bi-chevron-right ml-auto"></i>
-    </div>
+    </div> -->
 </div>
 
 <?php 
