@@ -426,6 +426,92 @@
         }
     }
 
+    function database_getFavoriteClubs($favorite_clubs) {
+        // Use the global connection
+        global $connection;
+
+        if($connection != null) {
+            $query = "SELECT * FROM clubs WHERE MATCH(club_name) AGAINST('$favorite_clubs')";
+            $results = mysqli_query($connection, $query);
+            // echo "query: " . $query;
+            
+            // If $row is not null, it found row data.
+            if($results && mysqli_num_rows($results) > 0) {
+                return $results;
+            }
+            else {
+                echo "you have no favorited clubs";
+            }
+        }
+    }
+
+    function database_getUserFavoriteClubs($name) {
+         // Use the global connection
+         global $connection;
+
+         // Create a default value
+         $favorite_clubs = "";
+ 
+         if($connection != null) {
+             // Use WHERE expressions to look for username
+             $results = mysqli_query($connection, "SELECT student_favorite_clubs FROM students WHERE student_fname = '{$name}' LIMIT 1;");
+             
+             // mysqli_fetch_assoc() returns either null or row data
+             $row = mysqli_fetch_assoc($results);
+             
+             // If $row is not null, it found row data.
+             if($row != null) {
+                 $favorite_clubs = $row["student_favorite_clubs"];
+             }
+         }
+ 
+         return $favorite_clubs;
+    }
+
+    function database_getFavoriteEvents($favorite_events) {
+        // Use the global connection
+        global $connection;
+
+        if($connection != null) {
+            $query = "SELECT * FROM events WHERE MATCH(event_name) AGAINST('$favorite_events')";
+            $results = mysqli_query($connection, $query);
+            // echo "query: " . $query;
+            
+            // If $row is not null, it found row data.
+            if($results && mysqli_num_rows($results) > 0) {
+                return $results;
+            }
+            else {
+                echo "you have no favorited events";
+            }
+        }
+    }
+
+    function database_getUserFavoriteEvents($name) {
+         // Use the global connection
+         global $connection;
+
+         // Create a default value
+         $favorite_events = "";
+ 
+         if($connection != null) {
+             // Use WHERE expressions to look for username
+             $results = mysqli_query($connection, "SELECT student_favorite_events FROM students WHERE student_fname = '{$name}' LIMIT 1;");
+             
+             // mysqli_fetch_assoc() returns either null or row data
+             $row = mysqli_fetch_assoc($results);
+             
+             // If $row is not null, it found row data.
+             if($row != null) {
+                 $favorite_events = $row["student_favorite_events"];
+             }
+         }
+ 
+         return $favorite_events;
+    }
+
+
+
 
 
 

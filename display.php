@@ -112,4 +112,52 @@ function display_searchClubs($query, $filters) {
     }
 }
 
+function display_favoriteClubs($favorite_clubs) {
+    $results = database_getFavoriteClubs($favorite_clubs);
+    
+        while ($clubs = mysqli_fetch_assoc($results)) {
+            $clubPageURL = "club.php?id=" . $clubs["id"];
+            echo "
+                <div class='pt-3 py-2 px-4 d-flex justify-content-between align-items-center'>
+                    <img class='noti-group--img' src='{$clubs['club_profile_img']}'>
+                    <p class='noti-group--desc club'>{$clubs['club_profile_bio']}</p>
+                    <a href=$clubPageURL><i class='bi bi-chevron-right ml-auto'></i></a>
+                </div>
+                <hr class='noti-hr'>
+            ";
+        }
+}
+
+function display_favoriteEvents($favorite_events) {
+    $results = database_getFavoriteEvents($favorite_events);
+    
+    while ($events = mysqli_fetch_assoc($results)) {
+        $eventPageURL = "event.php?id=" . $events["id"];
+        echo "
+            <div class='event'>
+                <div class='event--grid-item'>
+                    <img class='event--img' src='{$events['event_img']}'/>
+                </div>
+                <div class='event--info'>
+                    <a class='event--title' href=$eventPageURL>{$events['event_name']}</a>
+                    <p class='event--date'>{$events['event_start_date']} - {$events['event_start_time']}</p>
+                    <p class='event--location'>{$events['event_location']}</p>
+                    <div class='event--icons'>
+                        <a href='attendinglist.php'><i class='bi bi-person-check-fill'></i></a>
+                        <i class='bi bi-share'></i>
+                        <i class='bi bi-heart'></i>
+                    </div>
+                </div>
+            </div>
+        ";
+    }
+}
+
+// <div class="pt-3 py-2 px-4 d-flex justify-content-between align-items-center">
+//     <img class="noti-group--img" src="Images/clubs/cab.jpeg">
+//     <p class="noti-group--desc club">Our mission at UCF's Campus Activities Board (CAB) is to foster a sense of community on campus by hosting unique events that effectively cater to our diverse student body, and to the Orlando community.</p>
+//     <a href="clubdetails.php"><i class="bi bi-chevron-right ml-auto"></i></a>
+// </div>
+// <hr class="noti-hr">
+
 ?>

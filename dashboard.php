@@ -10,12 +10,12 @@
         
         database_connect();
         if (database_verifyUser($username, $password)) {
-            echo "<h2>$username, $password</h2>";
+            // echo "<h2>$username, $password</h2>";
             // session_start();
             if ($_SESSION["profile_type"] === "student") {
                 $_SESSION["firstname"] = database_getFirstName($username);
                 $_SESSION["lastname"] = database_getLastName($username);
-                echo $_SESSION["firstname"] . " " . $_SESSION["lastname"];
+                // echo $_SESSION["firstname"] . " " . $_SESSION["lastname"];
             }
 
             else if ($_SESSION["profile_type"] = "club") {
@@ -66,8 +66,10 @@
 ?>
 <main class="p-3">
     <a href="notifications.php"><i class="bi bi-bell noti-bell"></i></a>
-    <?php if (isset($_POST["student_fname"])) echo "<h2>Hello, $first_name</h2>"?>
-    <?php if (isset($_POST["club_name"])) echo "<h2>Hello, $name</h2>"?>
+    <?php 
+        // if (isset($_POST["student_fname"])) echo "<h2>Hello, $first_name</h2>";
+        // if (isset($_POST["club_name"])) echo "<h2>Hello, $name</h2>"
+        ?>
     <h2>Promoted Events</h2>
     <div class="scrolling-wrapper">
         <?php 
