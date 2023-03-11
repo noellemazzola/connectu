@@ -5,7 +5,7 @@
 
     database_connect();
 
-    echo "club id is ". $_GET['id'];
+    // echo "club id is ". $_GET['id'];
     $club_info = database_getClubInfo($_GET["id"]);
 
 ?>
