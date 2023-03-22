@@ -27,9 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `clubs`
 --
 
-CREATE DATEBASE connectu;
-
-CREATE DATEBASE connectu;
+CREATE DATABASE connectu;
 CREATE TABLE connectu.clubs (
   `id` int(11) NOT NULL,
   `club_name` varchar(255) NOT NULL,
