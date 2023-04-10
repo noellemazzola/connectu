@@ -367,8 +367,7 @@
                             WHERE (`club_name` LIKE '%".$club_query."%') 
                             OR (`club_profile_bio` LIKE '%".$club_query."%')";
             else if ($filters)
-                $query = "SELECT * FROM events WHERE MATCH(club_tags) AGAINST('$filters')";
-
+                $query = "SELECT * FROM clubs WHERE MATCH(club_tags) AGAINST('$filters')";
 
             $results = mysqli_query($connection, $query);
             
