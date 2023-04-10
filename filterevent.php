@@ -3,7 +3,7 @@
     <a class="back-arrow"><i class="bi bi-chevron-left" onclick="history.back()"></i></a>
     <h2>Filters</h2>
 </div>
-<form class="filters--form" action="searchevent.php" method="POST">
+<form class="filters--form remove-spacing" action="searchevent.php" method="POST">
     <fieldset class="filters--fieldset">
         <legend class="filters--title">Categories</legend>
         <div class="justify-content-around">
@@ -94,7 +94,8 @@
             </div>
         </div>
     </fieldset>
-    <button class="button mt-3" type="submit">Apply</button>
+    <button class="button mt-2" type="submit">Apply</button>
+    <button class="button mt-1" type="submit">Clear Filters</button>
 </form>
 
 
