@@ -3,25 +3,34 @@ window.addEventListener("load", init, false);
 
 // initialization
 function init() {
-    var loginInputs = document.getElementById("login_form").elements;
-    for (let i = 0; i < loginInputs.length; i++) {
-        if (loginInputs[i].type !== "submit")
-            loginInputs[i].addEventListener("blur", validateLoginInput, false);
+    let loginForm = document.getElementById("login_form");
+    if (loginForm !== null) {
+        let loginInputs = loginForm.elements;
+        for (let i = 0; i < loginInputs.length; i++) {
+            if (loginInputs[i].type !== "submit")
+                loginInputs[i].addEventListener("blur", validateLoginInput, false);
+        }
     }
 
-    var studentInputs = document.getElementById("register_student_form").elements;
-    for (let i = 0; i < studentInputs.length; i++) {
-        if (studentInputs[i].type !== "submit")
-            studentInputs[i].addEventListener("blur", validateStudentInput, false);
+    let studentForm = document.getElementById("register_student_form");
+    if (studentForm !== null) {
+        let studentInputs = studentForm.elements;
+        for (let i = 0; i < studentInputs.length; i++) {
+            if (studentInputs[i].type !== "submit")
+                studentInputs[i].addEventListener("blur", validateStudentInput, false);
+        }
     }
 
-    var clubInputs = document.getElementById("register_club_form").elements;
-    for (let i = 0; i < clubInputs.length; i++) {
-        if (clubInputs[i].type !== "submit")
-        clubInputs[i].addEventListener("blur", validateClubInput, false);
+    let clubForm = document.getElementById("register_club_form");
+    if (clubForm !== null) {
+        let clubInputs = clubForm.elements;
+        for (let i = 0; i < clubInputs.length; i++) {
+            if (clubInputs[i].type !== "submit")
+            clubInputs[i].addEventListener("blur", validateClubInput, false);
+        }
     }
 
-    // var createBtn = document.getElementById("student_create");
+    // let createBtn = document.getElementById("student_create");
     // createBtn.addEventListener("click", submitForm, false);
 }
 
@@ -32,39 +41,39 @@ function clearElement(el) {
 }
 
 // enables submit if all input is properly formatted
-function checkSpans(spanClassName) {
-    var createBtn = document.getElementById("student_create");
-    var spans = document.getElementsByClassName(spanClassName);
-    var clearedSpans = 0;
+function checkSpans(spanClassName, buttonIdName) {
+    let formBtn = document.getElementById(buttonIdName);
+    let spans = document.getElementsByClassName(spanClassName);
+    let clearedSpans = 0;
 
-    for (var i = 0; i < spans.length; i++) {
+    for (let i = 0; i < spans.length; i++) {
         if (!spans[i].hasChildNodes())
             clearedSpans++;
     }
 
     if (clearedSpans == spans.length)
-        createBtn.disabled = false;
+        formBtn.disabled = false;
     else
-        createBtn.disabled = true;
+        formBtn.disabled = true;
 
 }
 
 // validates the input in the form
 function validateLoginInput(e) {
-    var input = e.target;
-    var inputID = input.getAttribute("id");
+    let input = e.target;
+    let inputID = input.getAttribute("id");
 
-    var warningIcon = document.createElement("span");
+    let warningIcon = document.createElement("span");
     warningIcon.setAttribute("class", "bi bi-exclamation-triangle-fill");
 
     console.log("the input is " + input + " and the id is " + inputID);
 
-    var spans = document.getElementsByClassName("input-warning-login");
-    var warnings = [
+    let spans = document.getElementsByClassName("input-warning-login");
+    let warnings = [
         "Please enter only letters",
         "Please enter only letters"
     ];
-    var myRe = [
+    let myRe = [
         /^[A-Za-z]+$/,
         /^[A-Za-z]+$/
     ];
@@ -75,48 +84,48 @@ function validateLoginInput(e) {
         clearElement(spans[0]);
 
         if (input.value == "") {
-            var warningText = document.createTextNode("This field is required");
+            let warningText = document.createTextNode("This field is required");
             spans[0].appendChild(warningIcon);
             spans[0].appendChild(warningText);
         }
         // else if (!input.value.match(myRe[0])) {
-        //     var warningText = document.createTextNode(warnings[0]);
+        //     let warningText = document.createTextNode(warnings[0]);
         //     spans[0].appendChild(warningIcon);
         //     spans[0].appendChild(warningText);
         // }
 
-        checkSpans("input-warning-login");
+        checkSpans("input-warning-login", 'login-btn');
     }
     // checks last name
     else if (inputID == "login_password") {
         clearElement(spans[1]);
 
         if (input.value == "") {
-            var warningText = document.createTextNode("This field is required");
+            let warningText = document.createTextNode("This field is required");
             spans[1].appendChild(warningIcon);
             spans[1].appendChild(warningText);
         }
         // else if (!input.value.match(myRe[1])) {
-        //     var warningText = document.createTextNode(warnings[1]);
+        //     let warningText = document.createTextNode(warnings[1]);
         //     spans[1].appendChild(warningIcon);
         //     spans[1].appendChild(warningText);
         // }
 
-        checkSpans("input-warning-login");
+        checkSpans("input-warning-login", "login-btn");
     }
 }
 
 function validateStudentInput(e) {
-    var input = e.target;
-    var inputID = input.getAttribute("id");
+    let input = e.target;
+    let inputID = input.getAttribute("id");
 
-    var warningIcon = document.createElement("span");
+    let warningIcon = document.createElement("span");
     warningIcon.setAttribute("class", "bi bi-exclamation-triangle-fill");
 
     console.log("the input is " + input + " and the id is " + inputID);
 
-    var spans = document.getElementsByClassName("input-warning-student");
-    var warnings = [
+    let spans = document.getElementsByClassName("input-warning-student");
+    let warnings = [
         "Please enter only letters",
         "Please enter only letters",
         "Please enter term and year",
@@ -125,7 +134,7 @@ function validateStudentInput(e) {
         "Password must be at least 4 characters",
         "Passwords do not match"
     ];
-    var myRe = [
+    let myRe = [
         /^[A-Za-z]+$/,
         /^[A-Za-z]+$/,
         /^[A-Za-z]+ [0-9]{4}$/,
@@ -141,17 +150,17 @@ function validateStudentInput(e) {
         clearElement(spans[0]);
 
         if (input.value == "") {
-            var warningText = document.createTextNode("This field is required");
+            let warningText = document.createTextNode("This field is required");
             spans[0].appendChild(warningIcon);
             spans[0].appendChild(warningText);
         }
         else if (!input.value.match(myRe[0])) {
-            var warningText = document.createTextNode(warnings[0]);
+            let warningText = document.createTextNode(warnings[0]);
             spans[0].appendChild(warningIcon);
             spans[0].appendChild(warningText);
         }
 
-        checkSpans("input-warning-student");
+        checkSpans("input-warning-student", "student_create");
     }
     // checks last name
     else if (inputID == "student_lname") {
@@ -159,34 +168,34 @@ function validateStudentInput(e) {
         clearElement(spans[1]);
 
         if (input.value == "") {
-            var warningText = document.createTextNode("This field is required");
+            let warningText = document.createTextNode("This field is required");
             spans[1].appendChild(warningIcon);
             spans[1].appendChild(warningText);
         }
         else if (!input.value.match(myRe[1])) {
-            var warningText = document.createTextNode(warnings[1]);
+            let warningText = document.createTextNode(warnings[1]);
             spans[1].appendChild(warningIcon);
             spans[1].appendChild(warningText);
         }
 
-        checkSpans("input-warning-student");
+        checkSpans("input-warning-student","student_create");
     }
     else if (inputID == "student_gradyear") {
         // console.log("im checking last name");
         clearElement(spans[2]);
 
         if (input.value == "") {
-            var warningText = document.createTextNode("This field is required");
+            let warningText = document.createTextNode("This field is required");
             spans[2].appendChild(warningIcon);
             spans[2].appendChild(warningText);
         }
         else if (!input.value.match(myRe[2])) {
-            var warningText = document.createTextNode(warnings[2]);
+            let warningText = document.createTextNode(warnings[2]);
             spans[2].appendChild(warningIcon);
             spans[2].appendChild(warningText);
         }
 
-        checkSpans("input-warning-student");
+        checkSpans("input-warning-student", "student_create");
     }
     // checks email
     else if (inputID == "student_email") {
@@ -194,51 +203,51 @@ function validateStudentInput(e) {
         clearElement(spans[3]);
 
         if (input.value == "") {
-            var warningText = document.createTextNode("This field is required");
+            let warningText = document.createTextNode("This field is required");
             spans[3].appendChild(warningIcon);
             spans[3].appendChild(warningText);
         }
         else if (!input.value.match(myRe[3])) {
-            var warningText = document.createTextNode(warnings[3]);
+            let warningText = document.createTextNode(warnings[3]);
             spans[3].appendChild(warningIcon);
             spans[3].appendChild(warningText);
         }
 
-        checkSpans("input-warning-student");
+        checkSpans("input-warning-student", "student_create");
     }
     else if (inputID == "student_username") {
         console.log("im checking last name");
         clearElement(spans[4]);
 
         if (input.value == "") {
-            var warningText = document.createTextNode("This field is required");
+            let warningText = document.createTextNode("This field is required");
             spans[4].appendChild(warningIcon);
             spans[4].appendChild(warningText);
         }
         else if (!input.value.match(myRe[4])) {
-            var warningText = document.createTextNode(warnings[4]);
+            let warningText = document.createTextNode(warnings[4]);
             spans[4].appendChild(warningIcon);
             spans[4].appendChild(warningText);
         }
 
-        checkSpans("input-warning-student");
+        checkSpans("input-warning-student", "student_create");
     }
     else if (inputID == "student_password") {
         console.log("im checking last name");
         clearElement(spans[5]);
 
         if (input.value == "") {
-            var warningText = document.createTextNode("This field is required");
+            let warningText = document.createTextNode("This field is required");
             spans[5].appendChild(warningIcon);
             spans[5].appendChild(warningText);
         }
         else if (!input.value.match(myRe[5])) {
-            var warningText = document.createTextNode(warnings[5]);
+            let warningText = document.createTextNode(warnings[5]);
             spans[5].appendChild(warningIcon);
             spans[5].appendChild(warningText);
         }
 
-        checkSpans("input-warning-student");
+        checkSpans("input-warning-student", "student_create");
     }
     else if (inputID == "student_repeat_password") {
         console.log("im checking last name");
@@ -246,31 +255,31 @@ function validateStudentInput(e) {
 
 
         if (input.value == "") {
-            var warningText = document.createTextNode("This field is required");
+            let warningText = document.createTextNode("This field is required");
             spans[6].appendChild(warningIcon);
             spans[6].appendChild(warningText);
         }
         else if (input.value !== document.getElementById("student_password").value) {
-            var warningText = document.createTextNode(warnings[6]);
+            let warningText = document.createTextNode(warnings[6]);
             spans[6].appendChild(warningIcon);
             spans[6].appendChild(warningText);
         }
 
-        checkSpans("input-warning-student");
+        checkSpans("input-warning-student", "student_create");
     }
 }
 
 function validateClubInput(e) {
-    var input = e.target;
-    var inputID = input.getAttribute("id");
+    let input = e.target;
+    let inputID = input.getAttribute("id");
 
-    var warningIcon = document.createElement("span");
+    let warningIcon = document.createElement("span");
     warningIcon.setAttribute("class", "bi bi-exclamation-triangle-fill");
 
     console.log("the input is " + input + " and the id is " + inputID);
 
-    var spans = document.getElementsByClassName("input-warning-club");
-    var warnings = [
+    let spans = document.getElementsByClassName("input-warning-club");
+    let warnings = [
         "Please enter a club name",
         "Please enter only letters",
         "Please enter a vaild email address",
@@ -279,7 +288,7 @@ function validateClubInput(e) {
         "Password must be at least 4 characters",
         "Passwords do not match"
     ];
-    var myRe = [
+    let myRe = [
         /^[A-Za-z0-9 ']+$/,
         /^[A-Za-z ]+$/,
         /^[A-Za-z0-9]+@[A-Za-z]+[\.A-Za-z]+$/,
@@ -294,115 +303,115 @@ function validateClubInput(e) {
         clearElement(spans[0]);
 
         if (input.value == "") {
-            var warningText = document.createTextNode("This field is required");
+            let warningText = document.createTextNode("This field is required");
             spans[0].appendChild(warningIcon);
             spans[0].appendChild(warningText);
         }
         else if (!input.value.match(myRe[0])) {
-            var warningText = document.createTextNode(warnings[0]);
+            let warningText = document.createTextNode(warnings[0]);
             spans[0].appendChild(warningIcon);
             spans[0].appendChild(warningText);
         }
 
-        checkSpans("input-warning-club");
+        checkSpans("input-warning-club", "club_create");
     }
     // checks last name
     else if (inputID == "club_president") {
         clearElement(spans[1]);
 
         if (input.value == "") {
-            var warningText = document.createTextNode("This field is required");
+            let warningText = document.createTextNode("This field is required");
             spans[1].appendChild(warningIcon);
             spans[1].appendChild(warningText);
         }
         else if (!input.value.match(myRe[1])) {
-            var warningText = document.createTextNode(warnings[1]);
+            let warningText = document.createTextNode(warnings[1]);
             spans[1].appendChild(warningIcon);
             spans[1].appendChild(warningText);
         }
 
-        checkSpans("input-warning-club");
+        checkSpans("input-warning-club", "club_create");
     }
     else if (inputID == "club_email") {
         clearElement(spans[2]);
 
         if (input.value == "") {
-            var warningText = document.createTextNode("This field is required");
+            let warningText = document.createTextNode("This field is required");
             spans[2].appendChild(warningIcon);
             spans[2].appendChild(warningText);
         }
         else if (!input.value.match(myRe[2])) {
-            var warningText = document.createTextNode(warnings[2]);
+            let warningText = document.createTextNode(warnings[2]);
             spans[2].appendChild(warningIcon);
             spans[2].appendChild(warningText);
         }
 
-        checkSpans("input-warning-club");
+        checkSpans("input-warning-club", "club_create");
     }
     // checks email
     else if (inputID == "club_phone") {
         clearElement(spans[3]);
 
         if (input.value == "") {
-            var warningText = document.createTextNode("This field is required");
+            let warningText = document.createTextNode("This field is required");
             spans[3].appendChild(warningIcon);
             spans[3].appendChild(warningText);
         }
         else if (!input.value.match(myRe[3])) {
-            var warningText = document.createTextNode(warnings[3]);
+            let warningText = document.createTextNode(warnings[3]);
             spans[3].appendChild(warningIcon);
             spans[3].appendChild(warningText);
         }
 
-        checkSpans("input-warning-club");
+        checkSpans("input-warning-club", "club_create");
     }
     else if (inputID == "club_username") {
         clearElement(spans[4]);
 
         if (input.value == "") {
-            var warningText = document.createTextNode("This field is required");
+            let warningText = document.createTextNode("This field is required");
             spans[4].appendChild(warningIcon);
             spans[4].appendChild(warningText);
         }
         else if (!input.value.match(myRe[4])) {
-            var warningText = document.createTextNode(warnings[4]);
+            let warningText = document.createTextNode(warnings[4]);
             spans[4].appendChild(warningIcon);
             spans[4].appendChild(warningText);
         }
 
-        checkSpans("input-warning-club");
+        checkSpans("input-warning-club", "club_create");
     }
     else if (inputID == "club_password") {
         clearElement(spans[5]);
 
         if (input.value == "") {
-            var warningText = document.createTextNode("This field is required");
+            let warningText = document.createTextNode("This field is required");
             spans[5].appendChild(warningIcon);
             spans[5].appendChild(warningText);
         }
         else if (!input.value.match(myRe[5])) {
-            var warningText = document.createTextNode(warnings[5]);
+            let warningText = document.createTextNode(warnings[5]);
             spans[5].appendChild(warningIcon);
             spans[5].appendChild(warningText);
         }
 
-        checkSpans("input-warning-club");
+        checkSpans("input-warning-club", "club_create");
     }
-    else if (inputID == "club_repeat_password") {
+    else if (inputID == "club_password_repeat") {
         clearElement(spans[6]);
 
         if (input.value == "") {
-            var warningText = document.createTextNode("This field is required");
+            let warningText = document.createTextNode("This field is required");
             spans[6].appendChild(warningIcon);
             spans[6].appendChild(warningText);
         }
         else if (input.value !== document.getElementById("club_password").value) {
-            var warningText = document.createTextNode(warnings[6]);
+            let warningText = document.createTextNode(warnings[6]);
             spans[6].appendChild(warningIcon);
             spans[6].appendChild(warningText);
         }
 
-        checkSpans("input-warning-club");
+        checkSpans("input-warning-club", "club_create");
     }
 }
 
