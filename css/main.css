@@ -126,6 +126,10 @@ button.following {
     border: 1px solid #5E2BFF;
 }
 
+button:disabled {
+    opacity: 0.5;
+}
+
 /* WELCOME */
 .logo {
     width: 150px;
