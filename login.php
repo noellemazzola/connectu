@@ -9,7 +9,12 @@
         <input type="password" placeholder="Password" name="login_password" id="login_password" required>
         <span class="input-warning input-warning-login"></span>
 
-        <button class="button" type="submit">Log In</button>
+        <?php
+            if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === false)
+                echo '<p>Username and/or password does not match</p>';
+        ?>
+
+        <button class="button" type="submit" id="login-btn" disabled>Log In</button>
     </form>
 </main> 
 <?php include "templates/footer.php" ?>
