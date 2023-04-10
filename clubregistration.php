@@ -28,7 +28,7 @@
     <hr>
 
     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-    <button class="button" type="submit">Create Account</button>
+    <button class="button" type="submit" id="club_create">Create Account</button>
     <p>Already have an account? <a href="login.php">Sign in</a></p>
 </form>
 <?php include "templates/footer.php" ?>
