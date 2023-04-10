@@ -3,12 +3,15 @@
     include "database.php";
     include "display.php";
     
+    database_connect();
+    session_start();
+
     if (isset($_POST["login_username"]) && isset($_POST["login_password"])) {
         $username = htmlspecialchars($_POST["login_username"]);
         $password = htmlspecialchars($_POST["login_password"]);
         $_SESSION["loggedIn"] = true;
         
-        database_connect();
+        // database_connect();
         if (database_verifyUser($username, $password)) {
             // echo "<h2>$username, $password</h2>";
             // session_start();
@@ -22,6 +25,10 @@
                 $_SESSION["clubname"] = database_getClubName($username);
             }
         }
+        else {
+            $_SESSION["loggedIn"] = "true";
+            header("Location: login.php");
+        }
 
         // database_close();
     }
@@ -34,7 +41,7 @@
         $username = htmlspecialchars($_POST["student_username"]);
         $password = htmlspecialchars($_POST["student_password"]);
 
-        database_connect();
+        // database_connect();
         database_addStudent($first_name, $last_name, $grad_year, $email, $username, $password);
 
         session_start();
@@ -53,7 +60,7 @@
         $username = htmlspecialchars($_POST["club_username"]);
         $password = htmlspecialchars($_POST["club_password"]);
 
-        database_connect();
+        // database_connect();
         database_addClub($name, $president, $email, $phone, $username, $password);
 
         session_start();
@@ -128,7 +135,10 @@
     </div> -->
 </main>
 
-<?php
-    include "templates/navbar.php";
-    include "templates/footer.php"; 
-?>
+<?php include "templates/navbar.php"; ?>
+<script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>
+<?php include "templates/footer.php"; ?>
