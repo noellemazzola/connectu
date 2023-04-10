@@ -425,6 +425,30 @@
         }
     }
 
+    function database_getClubID($clubname) {
+        // Use the global connection
+        global $connection;
+
+        // Create a default value
+        $id = "";
+
+        if($connection != null) {
+            // Use WHERE expressions to look for username
+            $results = mysqli_query($connection, "SELECT id FROM clubs WHERE club_name = '{$clubname}' LIMIT 1;");
+            
+            // mysqli_fetch_assoc() returns either null or row data
+            $row = mysqli_fetch_assoc($results);
+            
+            // If $row is not null, it found row data.
+            if($row != null) {
+                // echo "row has data";
+                $id = $row["id"];
+            }
+
+            return $id;
+        }
+    }
+
     function database_getFavoriteClubs($favorite_clubs) {
         // Use the global connection
         global $connection;

@@ -34,8 +34,11 @@
     <h4 class="details--details">Details</h4>
     <p class="details--desc"><?php echo $event_info["event_desc"]?></p>
 
+    <?php $clubPageURL = "club.php?id=" . database_getClubID($event_info["event_organization"]); ?>
     <img class="details--profile-pic mt-4" src="<?php echo database_getProfileImg($event_info["event_organization"], "club")?>"/>
-    <p class="text-center my-2 details--club-name"><?php echo $event_info["event_organization"]?></p>
+    <p class="text-center my-2 details--club-name">
+        <?php echo "<a href=$clubPageURL>{$event_info['event_organization']}</a>" ?>
+    </p>
     <button class="follow following d-block m-auto">FOLLOWING</button>
 
     <h3 class="details--more-events mt-5">More Events by<br><?php echo $event_info["event_organization"]?></h3>
