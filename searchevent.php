@@ -43,8 +43,11 @@
     </div>
     <div class="pt-4 pb-2 justify-content-center">
         <i class="bi bi-search mr-2" style="color: #707070;"></i>
-        <form action="searchevent.php" method="POST" id="search_event_form">
-            <input class="search-input" type="text" name="event_query" placeholder="Search Events" />
+        <form action="searchevent.php" method="POST" id="search_event_form" ">
+            <input class="search-input" type="text" name="event_query" id="event_query" placeholder="Search Events" />
+            <button type="submit" style="width: fit-content; background-color: transparent; border: none;" id="clear">
+                <i class="bi bi-x" style="font-size: 40px;" onclick="document.getElementById('event_query').value = '';"></i>
+            </button>
         </form>
     </div>
     <button class="d-block m-auto filter-button"><a class="black-link" href="filterevent.php"><i class="bi bi-funnel"></i> Filter</a></button>
@@ -72,7 +75,10 @@
     </div> -->
 </main>
 
-<?php 
-  include "templates/navbar.php>";
-  include "templates/footer.php>";
-?>
+<?php include "templates/navbar.php"; ?>
+<script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>
+<?php include "templates/footer.php"; ?>
