@@ -61,8 +61,9 @@ function display_searchEvents($query, $filters) {
 
     if ($results !== null) {
         $num_results = mysqli_num_rows($results);
+        $event_term_agreement = $num_results === 1 ? "event" : "events";
         
-        echo "<p class='search-results m-2'>$num_results events</p>";
+        echo "<p class='search-results m-2'>$num_results $event_term_agreement</p>";
         
         while ($events = mysqli_fetch_assoc($results)) {
             $eventPageURL = "event.php?id=" . $events["id"];
@@ -92,8 +93,9 @@ function display_searchClubs($query, $filters) {
 
     if ($results !== null) {
         $num_results = mysqli_num_rows($results);
+        $club_term_agreement = $num_results === 1 ? "club" : "clubs";
         
-        echo "<p class='search-results m-2 ml-3'>$num_results clubs</p>";
+        echo "<p class='search-results m-2 ml-3'>$num_results $club_term_agreement</p>";
         echo "<div class='d-block noti-group'>";
         echo "<hr class='noti-hr'>";
     
