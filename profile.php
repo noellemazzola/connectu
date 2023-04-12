@@ -14,7 +14,21 @@
       $end_date = (isset($_POST["event_end_date"])) ? htmlspecialchars($_POST["event_end_date"]) : "";
       $end_time = (isset($_POST["event_end_time"])) ? htmlspecialchars($_POST["event_end_time"]) : "";
       $location = htmlspecialchars($_POST["event_location"]);
+
       $description = htmlspecialchars($_POST["event_desc"]);
+      $string = '\\';
+      $length = strlen($description);
+      $offset = 0;
+      $pos = strpos($description, "'", $offset);
+
+      // echo $sentence . "\n";
+      while ($pos !== false && $offset < $length) {
+        $description = substr_replace($description, $string, $pos, 0);
+        // echo "new sentence:  $sentence\n\n";
+        $offset = $pos + 2;
+        $pos = strpos($description, "'", $offset);
+      }
+
       $imgURL = "Images/events/default-event-img.png";
       
       // if (isset($_POST["event_img"])) {
@@ -103,15 +117,15 @@
       <div class='mainprofile'>
         <h2>@{$_SESSION['firstname']} {$_SESSION['lastname']}</h2>
         <h4>$bio</h4>
-        <a href='clubprofile.php'>Switch Account</a>
-      </div>
-      <div class='friendslistbt'>
+        </div>
+        <div class='friendslistbt'>
         <a href='friendslist.php'>Friends List</a>
-      </div>
-    ";
-  }
-?>
+        </div>
+        ";
+      }
+      ?>
 <!-- 
+  <a href='clubprofile.php'>Switch Account</a>
     <div class="profilepic">
       
     </div> -->
@@ -132,8 +146,12 @@
 
 <?php 
   database_close();
-
   include "templates/navbar.php>";
-  include "templates/footer.php>";
 ?>
+<script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>
+<?php include "templates/footer.php"; ?>
    
