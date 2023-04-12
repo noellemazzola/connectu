@@ -30,7 +30,7 @@
         <input type="text" placeholder="Description" name="event_desc" id="event_desc" required><br>
         <span class="input-warning input-warning-create"></span>
 
-        <label for="event_img">Upload Image:<br>recommended size: 1080 x 1080 px</label>
+        <label for="event_img">Upload Image (not required)<br>recommended size: 1080 x 1080 px</label>
         <input type="file" name="event_img" id="event_img" accept="image/png, image/jpeg, image/jpg" value="">
 
         <h5>Tags</h5>
@@ -56,7 +56,7 @@
       </form>
       </div>
       
-      <div class="uploadimage">
+      <!-- <div class="uploadimage">
         <h5>Upload Image:</h5>
         <h6>recommended size: 1080 x 1080</h6>
         <button>Upload File</button>
@@ -79,7 +79,7 @@
 
     <div class="createeb">
         <button>Create Event</button>
-    </div>
+    </div> -->
    
 <?php 
   include "templates/navbar.php>";
