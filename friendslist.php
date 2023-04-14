@@ -11,7 +11,7 @@
     <div class="py-3 d-flex justify-content-between align-items-center">
         <img class="noti-group--img" src="Images/profile/michael-dam-mEZ3PoFGs_k-unsplash.jpg">
         <p class="mb-0">@kate.zimmer</p>
-        <a href="user.php"><i class="bi bi-chevron-right ml-auto"></i></a>
+        <a href="user.php" style="display: contents;"><i class="bi bi-chevron-right ml-auto"></i></a>
     </div>
     <div class="py-3 d-flex justify-content-between align-items-center">
         <img class="noti-group--img" src="Images/profile/christopher-campbell-rDEOVtE7vOs-unsplash.jpg">
