@@ -635,14 +635,14 @@ div {
 .settingsop li i {
     display: block;
     float: right;
-    padding-left: 190px;
+    padding-left: 170px;
     color: black;
 }
 .logout {
     display: block;
     position: relative;
     text-align: center;
-    top: 200px;
+    top: 130px;
 }
 .logout a {
     font-family: 'Helvetica';
