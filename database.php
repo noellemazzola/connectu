@@ -22,8 +22,8 @@
         global $connection;
 
         if ($connection != null) {
-            $query = "INSERT INTO students (student_fname, student_lname, student_gradyear, student_email, student_username, student_password) 
-                        VALUES ('$first_name', '$last_name', '$grad_year', '$email', '$username', '$password')";
+            $query = "INSERT INTO students (student_fname, student_lname, student_gradyear, student_email, student_username, student_password, student_profile_img) 
+                        VALUES ('$first_name', '$last_name', '$grad_year', '$email', '$username', '$password', 'Images/profile/default-profile-pic.jpg')";
             return mysqli_query($connection, $query);
         }
     }
@@ -32,8 +32,8 @@
         global $connection;
 
         if ($connection != null) {
-            $query = "INSERT INTO clubs (club_name, club_president, club_email, club_phone, club_username, club_password) 
-                        VALUES ('$name', '$president', '$email', '$phone', '$username', '$password')";
+            $query = "INSERT INTO clubs (club_name, club_president, club_email, club_phone, club_username, club_password, club_profile_img) 
+                        VALUES ('$name', '$president', '$email', '$phone', '$username', '$password', 'Images/profile/default-profile-pic-inverted.jpg')";
             return mysqli_query($connection, $query);
         }
     }
@@ -49,6 +49,23 @@
             // echo "about to return";
             $retval = mysqli_query($connection, $query);
             // echo "the return value is $retval";
+            return $retval;
+        }
+    }
+    
+    function database_addEventToFavorites($event) {
+        global $connection;
+        
+        if ($connection != null) {
+            // echo "there is a connection";
+            $favorite_events = database_getUserFavoriteEvents($_SESSION["firstname"]);
+            // echo $favorite_events;
+            $event_list = $favorite_events . " , " . $event['event_name'];
+
+            $query = "UPDATE students SET student_favorite_events = '$event_list' WHERE student_fname = '{$_SESSION["firstname"]}' LIMIT 1;";
+            // echo $query;
+            $retval = mysqli_query($connection, $query);
+            // echo 'the retval is: ' . $retval;
             return $retval;
         }
     }
@@ -77,9 +94,9 @@
 
                 if($password === $row["student_password"]) {
                     $status = true;
-                    session_start();
+                    // session_start();
                     $_SESSION["profile_type"] = "student";
-                    echo "<h2>student user exists</h2>";
+                    // echo "<h2>student user exists</h2>";
 
                 }
             }
@@ -98,7 +115,7 @@
 
                     if($password === $row["club_password"]) {
                         $status = true;
-                        session_start();
+                        // session_start();
                         $_SESSION["profile_type"] = "club";
                         // echo "<h2>club user exists</h2>";
 
@@ -463,7 +480,7 @@
                 return $results;
             }
             else {
-                echo "you have no favorited clubs";
+                echo "<p class='search-results text-center mt-5'>you have no favorited clubs</p>";
             }
         }
     }
@@ -498,14 +515,15 @@
         if($connection != null) {
             $query = "SELECT * FROM events WHERE MATCH(event_name) AGAINST('$favorite_events')";
             $results = mysqli_query($connection, $query);
-            // echo "query: " . $query;
+            // echo "query: " . $query . "\n";
+            // echo "results: " . $results;
             
             // If $row is not null, it found row data.
             if($results && mysqli_num_rows($results) > 0) {
                 return $results;
             }
             else {
-                echo "you have no favorited events";
+                echo "<p class='search-results text-center mt-5'>you have no favorited events</p>";
             }
         }
     }

@@ -2,6 +2,13 @@
 <div class="page-title">
     <h2>Messages</h2>
 </div>
+<?php
+    session_start();
+
+    if (isset($_SESSION["user_registered"]) &&  $_SESSION["user_registered"] === true)
+        echo "<p class='search-results text-center mt-5'>you have no messages</p>"; 
+    else {
+?>
 <div class="px-4 d-flex">
     <h5 class="noti-group--title ml-auto">Requests (2)</h5>
 </div>
@@ -57,6 +64,7 @@
 </div>
 
 <?php 
+    }
     include "templates/navbar.php";
     include "templates/footer.php";
 ?>

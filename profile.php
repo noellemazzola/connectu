@@ -84,7 +84,6 @@
       <div class='clubprofile'>
         <h2>{$_SESSION["clubname"]}</h2>
         <h4>$bio</h4>
-        <a href='profile.php'>Switch Account</a>
         <ul>
           <li><i class='bi bi-youtube' style='font-size:36px'></i></li>
           <li><i class='bi bi-instagram' style='font-size:36px'></i></li>

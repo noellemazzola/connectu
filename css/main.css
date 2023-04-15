@@ -196,11 +196,20 @@ button:disabled {
 .event--title {
     font-weight: bold;
     color: #000000;
+    width: 100%;
 }
 
 .event--title:hover {
     text-decoration: none;
     color: #000000;
+}
+
+.event--date {
+    width: 100%;
+}
+
+.event--location {
+    width: 100%;
 }
 
 .event--icons {
@@ -271,6 +280,14 @@ i.larger {
 .details--club-name {
     font-size: 25px;
     font-family: 'Franklin Gothic Medium',sans-serif;
+}
+
+.details--club-name a {
+    color: #000000;
+}
+
+.details--club-name a:hover {
+    text-decoration: none;
 }
 
 .details--more-events {
@@ -797,6 +814,11 @@ div {
     margin-bottom: 10px;
     width: 100%;
 }
+
+input.input-tag {
+    width: initial;
+} 
+
 .uploadimage {
     display: block;
     padding-left: 30px;
@@ -878,6 +900,9 @@ div {
     margin-left: 100px;
     margin-bottom: 30px;
 }
+
+
+
 /*PROFILE.PHP STYLING*/
 .setgear {
     float: right;

@@ -6,6 +6,13 @@
   <div class="pagetitle">
       <h2>Friends List</h2>
   </div>
+  <?php
+    session_start();
+
+    if (isset($_SESSION["user_registered"]) &&  $_SESSION["user_registered"] === true)
+        echo "<p class='search-results text-center mt-5'>you have no friends</p>"; 
+    else {
+?>
 
 <div class="d-block px-4 noti-group">
     <div class="py-3 d-flex justify-content-between align-items-center">
@@ -40,4 +47,4 @@
     </div>
 </div>
    
-<?php include "templates/footer.php>" ?>
+<?php } include "templates/footer.php>" ?>

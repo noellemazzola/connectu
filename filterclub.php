@@ -81,15 +81,15 @@
         <legend class="filters--title">Campus</legend>
         <div class="justify-content-around">
             <div class="d-block">
-                <input class="filters--input" type="checkbox" id="filter_campus_1" name="filter_campus[]" value="Bike">
+                <input class="filters--input" type="checkbox" id="filter_campus_1" name="filter_campus[]" value="main">
                 <label for="filter_campus_1">Main</label><br>
             </div>
             <div class="d-block">
-                <input class="filters--input" type="checkbox" id="filter_campus_2" name="filter_campus[]" value="Bike">
+                <input class="filters--input" type="checkbox" id="filter_campus_2" name="filter_campus[]" value="downtown">
                 <label for="filter_campus_2">Downtown</label><br>
             </div>
             <div class="d-block">
-                <input class="filters--input" type="checkbox" id="filter_campus_3" name="filter_campus[]" value="Bike">
+                <input class="filters--input" type="checkbox" id="filter_campus_3" name="filter_campus[]" value="rosen">
                 <label for="filter_campus_3">Rosen</label><br>
             </div>
         </div>

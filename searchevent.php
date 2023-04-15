@@ -28,7 +28,7 @@
 
     $_SESSION["event_tags"] = $tags;
 
-    echo "the search is " . $_SESSION["event_query"] . " and the filters are $tags";
+    // echo "the search is " . $_SESSION["event_query"] . " and the filters are $tags";
 ?>
 
 <main class="pt-4 px-2">

@@ -66,7 +66,7 @@ function validateLoginInput(e) {
     let warningIcon = document.createElement("span");
     warningIcon.setAttribute("class", "bi bi-exclamation-triangle-fill");
 
-    console.log("the input is " + input + " and the id is " + inputID);
+    // console.log("the input is " + input + " and the id is " + inputID);
 
     let spans = document.getElementsByClassName("input-warning-login");
     let warnings = [
@@ -78,7 +78,7 @@ function validateLoginInput(e) {
         /^[A-Za-z]+$/
     ];
 
-    console.log("second check for id: " + inputID);
+    // console.log("second check for id: " + inputID);
     // checks first name
     if (inputID == "login_username") {
         clearElement(spans[0]);
@@ -122,7 +122,7 @@ function validateStudentInput(e) {
     let warningIcon = document.createElement("span");
     warningIcon.setAttribute("class", "bi bi-exclamation-triangle-fill");
 
-    console.log("the input is " + input + " and the id is " + inputID);
+    // console.log("the input is " + input + " and the id is " + inputID);
 
     let spans = document.getElementsByClassName("input-warning-student");
     let warnings = [
@@ -143,10 +143,10 @@ function validateStudentInput(e) {
         /^[A-Za-z0-9]{4,}$/
     ];
 
-    console.log("second check for id: " + inputID);
+    // console.log("second check for id: " + inputID);
     // checks first name
     if (inputID == "student_fname") {
-        console.log("im checking first name");
+        // console.log("im checking first name");
         clearElement(spans[0]);
 
         if (input.value == "") {
@@ -164,7 +164,7 @@ function validateStudentInput(e) {
     }
     // checks last name
     else if (inputID == "student_lname") {
-        console.log("im checking last name");
+        // console.log("im checking last name");
         clearElement(spans[1]);
 
         if (input.value == "") {
@@ -199,7 +199,7 @@ function validateStudentInput(e) {
     }
     // checks email
     else if (inputID == "student_email") {
-        console.log("im checking email");
+        // console.log("im checking email");
         clearElement(spans[3]);
 
         if (input.value == "") {
@@ -216,7 +216,7 @@ function validateStudentInput(e) {
         checkSpans("input-warning-student", "student_create");
     }
     else if (inputID == "student_username") {
-        console.log("im checking last name");
+        // console.log("im checking last name");
         clearElement(spans[4]);
 
         if (input.value == "") {
@@ -233,7 +233,7 @@ function validateStudentInput(e) {
         checkSpans("input-warning-student", "student_create");
     }
     else if (inputID == "student_password") {
-        console.log("im checking last name");
+        // console.log("im checking last name");
         clearElement(spans[5]);
 
         if (input.value == "") {
@@ -250,7 +250,7 @@ function validateStudentInput(e) {
         checkSpans("input-warning-student", "student_create");
     }
     else if (inputID == "student_repeat_password") {
-        console.log("im checking last name");
+        // console.log("im checking last name");
         clearElement(spans[6]);
 
 
@@ -276,7 +276,7 @@ function validateClubInput(e) {
     let warningIcon = document.createElement("span");
     warningIcon.setAttribute("class", "bi bi-exclamation-triangle-fill");
 
-    console.log("the input is " + input + " and the id is " + inputID);
+    // console.log("the input is " + input + " and the id is " + inputID);
 
     let spans = document.getElementsByClassName("input-warning-club");
     let warnings = [
@@ -297,7 +297,7 @@ function validateClubInput(e) {
         /^[A-Za-z0-9]{4,}$/
     ];
 
-    console.log("second check for id: " + inputID);
+    // console.log("second check for id: " + inputID);
     // checks first name
     if (inputID == "club_name") {
         clearElement(spans[0]);

@@ -3,8 +3,8 @@
     include "database.php";
     include "display.php";
     
-    database_connect();
     session_start();
+    database_connect();
 
     if (isset($_POST["login_username"]) && isset($_POST["login_password"])) {
         $username = htmlspecialchars($_POST["login_username"]);
@@ -26,7 +26,7 @@
             }
         }
         else {
-            $_SESSION["loggedIn"] = "true";
+            $_SESSION["loggedIn"] = "false";
             header("Location: login.php");
         }
 
@@ -44,7 +44,8 @@
         // database_connect();
         database_addStudent($first_name, $last_name, $grad_year, $email, $username, $password);
 
-        session_start();
+        // session_start();
+        $_SESSION["user_registered"] = true;
         $_SESSION["profile_type"] = "student";
         $_SESSION["firstname"] = $first_name;
         $_SESSION["lastname"] = $last_name;
@@ -60,14 +61,17 @@
         $username = htmlspecialchars($_POST["club_username"]);
         $password = htmlspecialchars($_POST["club_password"]);
 
-        // database_connect();
         database_addClub($name, $president, $email, $phone, $username, $password);
 
-        session_start();
+        // session_start();
+        $_SESSION["user_registered"] = true;
         $_SESSION["profile_type"] = "club";
         $_SESSION["clubname"] = $name;
+    }
 
-        // database_close();
+    if (isset($_GET["event_id"])) {
+        $event_info = database_getEventInfo($_GET["event_id"]);
+        database_addEventToFavorites($event_info);
     }
 
 ?>
