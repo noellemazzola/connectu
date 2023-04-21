@@ -1,4 +1,4 @@
-<?php include "templates/header.php>"?>
+<?php require "templates/header.php>"?>
     <div class="back">
     <i class="bi bi-chevron-left" style="font-size:36px" onclick="history.back()"></i>
     </div>
@@ -13,6 +13,6 @@
         <a href="messages-kate.php">Message</a>
       </div>
 <?php 
-  include "templates/navbar.php>";
-  include "templates/footer.php>";
+  require "templates/navbar.php>";
+  require "templates/footer.php>";
 ?>

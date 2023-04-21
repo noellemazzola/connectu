@@ -1,11 +1,11 @@
 <?php 
-  include "templates/header.php";
-  include "database.php";
-  include "display.php";
+  require "templates/header.php";
+  require "database.php";
+  require "display.php";
   
+  session_start();
   database_connect();
 
-  session_start();
   if ($_SESSION["profile_type"] === "club") {
     if (isset($_POST["event_name"]) && isset($_POST["event_start_date"]) && isset($_POST["event_start_time"]) && isset($_POST["event_location"]) && isset($_POST["event_desc"])) {
       $name = htmlspecialchars($_POST["event_name"]);
@@ -145,7 +145,7 @@
 
 <?php 
   database_close();
-  include "templates/navbar.php>";
+  require "templates/navbar.php>";
 ?>
 <script>
     if ( window.history.replaceState ) {
